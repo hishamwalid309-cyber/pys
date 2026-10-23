@@ -1,0 +1,1729 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>عصبية الحب — دليل الدماغ في المواقف العاطفية بين الحبيبين</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#070d1b;
+  --navy-2:#0c1730;
+  --navy-3:#101f3d;
+  --teal:#2ee6c5;
+  --teal-d:#12a892;
+  --gold:#f5c451;
+  --gold-d:#c9962a;
+  --rose:#ff6b8b;
+  --violet:#8b7bff;
+  --ink:#eaf2ff;
+  --muted:#93a4c4;
+  --line:rgba(46,230,197,.18);
+  --card:linear-gradient(160deg,rgba(20,36,66,.92),rgba(9,17,33,.96));
+  --shadow:0 18px 50px -20px rgba(0,0,0,.85);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Tajawal','Cairo','Segoe UI',Tahoma,sans-serif;
+  background:
+    radial-gradient(1100px 700px at 85% -8%,rgba(46,230,197,.13),transparent 62%),
+    radial-gradient(900px 600px at 8% 8%,rgba(139,123,255,.12),transparent 60%),
+    radial-gradient(1000px 800px at 50% 110%,rgba(245,196,81,.07),transparent 60%),
+    var(--navy);
+  color:var(--ink);
+  line-height:1.95;
+  font-size:17px;
+  -webkit-font-smoothing:antialiased;
+}
+/* ===== شريط التقدم ===== */
+#bar{position:fixed;top:0;right:0;height:4px;width:0;background:linear-gradient(90deg,var(--teal),var(--gold),var(--rose));z-index:999;box-shadow:0 0 18px rgba(46,230,197,.6)}
+/* ===== الغلاف ===== */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:70px 24px;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(46,230,197,.16) 1px,transparent 1px);background-size:34px 34px;opacity:.5;mask-image:radial-gradient(circle at 50% 40%,#000,transparent 72%)}
+.hero-inner{position:relative;z-index:2;max-width:900px}
+.kicker{display:inline-block;font-size:13px;letter-spacing:3px;color:var(--teal);border:1px solid var(--line);padding:7px 20px;border-radius:999px;margin-bottom:26px;background:rgba(46,230,197,.06)}
+h1.hero-title{font-size:clamp(38px,7vw,78px);font-weight:900;line-height:1.25;background:linear-gradient(120deg,#fff 8%,var(--teal) 45%,var(--gold) 95%);-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:-1px}
+.hero-sub{font-size:clamp(16px,2.2vw,21px);color:var(--muted);margin-top:22px;max-width:720px;margin-inline:auto;line-height:2}
+.hero-meta{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:38px}
+.chip{border:1px solid var(--line);border-radius:14px;padding:12px 22px;background:rgba(255,255,255,.03);font-size:14px;color:#cfe0ff}
+.chip b{color:var(--gold);font-size:19px;display:block;font-weight:800}
+.scroll-hint{margin-top:54px;color:var(--muted);font-size:13px;animation:bob 2.4s infinite}
+@keyframes bob{0%,100%{transform:translateY(0);opacity:.55}50%{transform:translateY(9px);opacity:1}}
+/* ===== الفهرس ===== */
+.toc{max-width:1180px;margin:0 auto;padding:80px 24px 40px}
+.toc h2{font-size:30px;margin-bottom:8px;color:#fff}
+.toc p{color:var(--muted);margin-bottom:30px;font-size:15px}
+.toc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}
+.toc a{display:flex;align-items:center;gap:12px;padding:13px 15px;border-radius:14px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);color:#cfe0ff;text-decoration:none;font-size:13.5px;transition:.22s}
+.toc a:hover{background:rgba(46,230,197,.1);border-color:var(--teal);transform:translateY(-3px);color:#fff}
+.toc a span.n{font-weight:800;color:var(--teal);font-size:12px;min-width:22px}
+/* ===== الصفحات ===== */
+.page{max-width:1180px;margin:0 auto;padding:56px 24px;border-bottom:1px solid rgba(255,255,255,.045)}
+.page-head{display:flex;align-items:flex-start;gap:26px;margin-bottom:34px}
+.icon-badge{
+  flex:0 0 auto;width:104px;height:104px;border-radius:28px;
+  display:grid;place-items:center;position:relative;
+  background:linear-gradient(150deg,rgba(46,230,197,.22),rgba(139,123,255,.16));
+  border:1px solid rgba(46,230,197,.35);
+  box-shadow:0 14px 40px -14px rgba(46,230,197,.55),inset 0 1px 0 rgba(255,255,255,.14);
+}
+.icon-badge svg{width:52px;height:52px;stroke:var(--teal);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.icon-badge .num{position:absolute;top:-10px;left:-10px;background:linear-gradient(135deg,var(--gold),var(--gold-d));color:#1a1205;font-weight:900;font-size:14px;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;box-shadow:0 8px 18px -6px rgba(245,196,81,.8)}
+.page-title{font-size:clamp(24px,3.4vw,36px);font-weight:900;color:#fff;line-height:1.4}
+.page-title small{display:block;font-size:14px;font-weight:500;color:var(--teal);letter-spacing:2px;margin-bottom:6px;text-transform:uppercase}
+.page-desc{color:var(--muted);font-size:16px;margin-top:8px}
+h3{font-size:21px;color:var(--gold);margin:34px 0 12px;font-weight:800;display:flex;align-items:center;gap:10px}
+h3:before{content:"";width:5px;height:22px;border-radius:4px;background:linear-gradient(var(--teal),var(--gold))}
+h4{font-size:17px;color:#fff;margin:20px 0 8px;font-weight:700}
+p{margin-bottom:14px;color:#d7e3f7}
+strong{color:#fff;font-weight:700}
+em{color:var(--teal);font-style:normal;font-weight:600}
+.lead{font-size:18.5px;color:#c6d6f0;line-height:2.05}
+/* ===== كروت ===== */
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin:20px 0}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:20px 0}
+.card{background:var(--card);border:1px solid rgba(255,255,255,.07);border-radius:18px;padding:20px 22px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.card:before{content:"";position:absolute;inset-inline-start:0;top:0;width:3px;height:100%;background:linear-gradient(var(--teal),transparent)}
+.card.gold:before{background:linear-gradient(var(--gold),transparent)}
+.card.rose:before{background:linear-gradient(var(--rose),transparent)}
+.card.violet:before{background:linear-gradient(var(--violet),transparent)}
+.card h4{margin-top:0}
+.card p:last-child{margin-bottom:0}
+.card .tag{font-size:11.5px;color:var(--teal);letter-spacing:1.5px;font-weight:700;display:block;margin-bottom:6px}
+/* ===== صناديق مفتاحية ===== */
+.key{background:linear-gradient(145deg,rgba(46,230,197,.1),rgba(46,230,197,.02));border:1px solid rgba(46,230,197,.32);border-radius:18px;padding:20px 24px;margin:24px 0;position:relative}
+.key b{color:var(--teal);display:block;margin-bottom:6px;font-size:14px;letter-spacing:1px}
+.warn{background:linear-gradient(145deg,rgba(255,107,139,.1),rgba(255,107,139,.02));border:1px solid rgba(255,107,139,.32)}
+.warn b{color:var(--rose)}
+.gold-box{background:linear-gradient(145deg,rgba(245,196,81,.1),rgba(245,196,81,.02));border:1px solid rgba(245,196,81,.3)}
+.gold-box b{color:var(--gold)}
+/* ===== قوائم ===== */
+ul.clean{list-style:none;margin:14px 0}
+ul.clean li{padding-inline-start:28px;position:relative;margin-bottom:10px;color:#d7e3f7}
+ul.clean li:before{content:"";position:absolute;inset-inline-start:6px;top:12px;width:8px;height:8px;border-radius:50%;background:var(--teal);box-shadow:0 0 10px var(--teal)}
+ol.steps{list-style:none;counter-reset:s;margin:16px 0}
+ol.steps li{counter-increment:s;position:relative;padding-inline-start:44px;margin-bottom:14px}
+ol.steps li:before{content:counter(s);position:absolute;inset-inline-start:0;top:2px;width:28px;height:28px;border-radius:9px;background:rgba(46,230,197,.14);border:1px solid rgba(46,230,197,.35);color:var(--teal);font-weight:800;font-size:14px;display:grid;place-items:center}
+/* ===== جداول ===== */
+table{width:100%;border-collapse:collapse;margin:22px 0;font-size:15px;background:rgba(10,18,34,.6);border-radius:14px;overflow:hidden}
+th{background:rgba(46,230,197,.12);color:var(--teal);padding:13px 14px;text-align:right;font-weight:700;font-size:14px;border-bottom:1px solid var(--line)}
+td{padding:12px 14px;border-bottom:1px solid rgba(255,255,255,.05);color:#d7e3f7;vertical-align:top}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:rgba(46,230,197,.04)}
+/* ===== مخططات ===== */
+figure{margin:28px 0;background:linear-gradient(160deg,rgba(13,25,48,.9),rgba(7,13,27,.95));border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:22px;box-shadow:var(--shadow)}
+figure svg{width:100%;height:auto;display:block}
+figcaption{text-align:center;color:var(--muted);font-size:13px;margin-top:12px;padding-top:12px;border-top:1px dashed rgba(255,255,255,.08)}
+figcaption b{color:var(--gold)}
+.svg-label{font-family:'Tajawal',sans-serif;font-size:13px;fill:#cfe0ff}
+.svg-small{font-family:'Tajawal',sans-serif;font-size:11px;fill:#93a4c4}
+.svg-title{font-family:'Tajawal',sans-serif;font-size:15px;fill:#fff;font-weight:700}
+/* ===== فواصل ونقلات ===== */
+.quote{border-inline-start:3px solid var(--gold);padding:8px 22px;margin:26px 0;color:#e8d9b8;font-family:'Amiri',serif;font-size:20px;line-height:2}
+.ref{font-size:12.5px;color:#7f90ad;border-top:1px dashed rgba(255,255,255,.08);margin-top:16px;padding-top:10px}
+.badge-row{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}
+.badge{font-size:12px;padding:5px 13px;border-radius:999px;background:rgba(139,123,255,.12);border:1px solid rgba(139,123,255,.3);color:#c3b8ff}
+.badge.t{background:rgba(46,230,197,.1);border-color:rgba(46,230,197,.3);color:var(--teal)}
+.badge.g{background:rgba(245,196,81,.1);border-color:rgba(245,196,81,.3);color:var(--gold)}
+/* ===== زر أعلى ===== */
+#top{position:fixed;bottom:26px;left:26px;width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--teal-d));color:#04231e;border:none;font-size:20px;cursor:pointer;display:none;place-items:center;box-shadow:0 12px 30px -8px rgba(46,230,197,.7);z-index:900;font-weight:900}
+/* ===== الطباعة ===== */
+@media print{
+  @page{size:A4;margin:11mm}
+  body{background:#fff;color:#111;font-size:11.5pt;line-height:1.75}
+  #bar,#top,.scroll-hint{display:none!important}
+  .hero{min-height:auto;page-break-after:always;padding:40mm 0}
+  .hero-title{color:#0b1b33!important;-webkit-text-fill-color:#0b1b33}
+  .page{page-break-after:always;padding:0 0 8mm;border:none;max-width:none}
+  figure,table,.key,.card{page-break-inside:avoid}
+  .card,figure,table{background:#f7f9fc!important;border:1px solid #d9e2ef!important;box-shadow:none!important}
+  p,li,td{color:#1e293b}
+  h1,h2,h3,h4,.page-title{color:#0b1b33!important}
+  .page-title small,h3{color:#0f766e!important}
+  .icon-badge{background:#e6fbf6!important;border-color:#0f766e!important;box-shadow:none!important}
+  .icon-badge svg{stroke:#0f766e!important}
+  .key{background:#f0fdfa!important;border-color:#0f766e!important}
+  th{background:#e6fbf6!important;color:#0f766e!important}
+  .toc{display:none}
+  .svg-label{fill:#1e293b}.svg-small{fill:#475569}.svg-title{fill:#0b1b33}
+}
+@media(max-width:640px){
+  body{font-size:16px}
+  .page-head{flex-direction:column;gap:16px}
+  .icon-badge{width:78px;height:78px;border-radius:22px}
+  .icon-badge svg{width:38px;height:38px}
+  .page{padding:38px 16px}
+}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+
+<!-- ================= الغلاف ================= -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="kicker">علم الأعصاب العاطفي · نسخة الدراسة والتدريس</div>
+    <h1 class="hero-title">كيف يعمل الدماغ<br>في الحب؟</h1>
+    <p class="hero-sub">
+      رحلة تشريحية وكيميائية من أول نظرة… إلى آخر نفس.
+      ثلاثون قسمًا تُحوّل «الحب» من كلمة غامضة إلى <strong>نظام بيولوجي</strong> يمكن فهمه ودراسته وتعليمه والعيش معه بذكاء.
+    </p>
+    <div class="hero-meta">
+      <div class="chip"><b>30</b>قسمًا مرجعيًا</div>
+      <div class="chip"><b>15</b>مخططًا توضيحيًا</div>
+      <div class="chip"><b>5</b>مراحل علاقة</div>
+      <div class="chip"><b>4</b>أنماط تعلّق</div>
+    </div>
+    <div class="scroll-hint">مرّر للأسفل لتبدأ ↓</div>
+  </div>
+</header>
+
+<!-- ================= الفهرس ================= -->
+<section class="toc">
+  <h2>خريطة الدليل</h2>
+  <p>كل قسم صُمّم كوحدة مستقلة: تُقرأ وحدها، وتُدرَّس وحدها. ابدأ من أيقونة، وانتهِ بفكرة قابلة للتطبيق.</p>
+  <div class="toc-grid">
+    <a href="#s1"><span class="n">01</span> خريطة الدماغ العاطفي</a>
+    <a href="#s2"><span class="n">02</span> الأنظمة الثلاثة للحب</a>
+    <a href="#s3"><span class="n">03</span> دائرة المكافأة والدوبامين</a>
+    <a href="#s4"><span class="n">04</span> كيمياء أول أسبوع</a>
+    <a href="#s5"><span class="n">05</span> اللوزة: مصنع الخوف من الرفض</a>
+    <a href="#s6"><span class="n">06</span> كيف يقرأ الدماغ وجه الحبيب</a>
+    <a href="#s7"><span class="n">07</span> الأوكسيتوسين: الحقيقة والأسطورة</a>
+    <a href="#s8"><span class="n">08</span> لماذا نشعر بـ«الفراشات»</a>
+    <a href="#s9"><span class="n">09</span> خط زمن العلاقة كاملًا</a>
+    <a href="#s10"><span class="n">10</span> الشهر 0–3: الاندماج والهلع</a>
+    <a href="#s11"><span class="n">11</span> الشهر 3–12: التثبيت</a>
+    <a href="#s12"><span class="n">12</span> السنة 1–3: الانطفاء التدريجي</a>
+    <a href="#s13"><span class="n">13</span> الحب طويل الأمد</a>
+    <a href="#s14"><span class="n">14</span> الحب كإدمان</a>
+    <a href="#s15"><span class="n">15</span> تشريح الانفصال</a>
+    <a href="#s16"><span class="n">16</span> لماذا لا ينسى الدماغ</a>
+    <a href="#s17"><span class="n">17</span> خمسة أنواع من النهايات</a>
+    <a href="#s18"><span class="n">18</span> الحزن المعقد والنمو</a>
+    <a href="#s19"><span class="n">19</span> أنماط التعلّق الأربعة</a>
+    <a href="#s20"><span class="n">20</span> فخ القلق–التجنب</a>
+    <a href="#s21"><span class="n">21</span> تنظيم العاطفة</a>
+    <a href="#s22"><span class="n">22</span> الإجهاد المزمن والكورتيزول</a>
+    <a href="#s23"><span class="n">23</span> تشريح العلاقة الصحية</a>
+    <a href="#s24"><span class="n">24</span> الأعلام الحمراء العصبية</a>
+    <a href="#s25"><span class="n">25</span> أنواع الحب السبعة</a>
+    <a href="#s26"><span class="n">26</span> الخلاف: فرسان الخراب</a>
+    <a href="#s27"><span class="n">27</span> الرغبة مقابل الحميمية</a>
+    <a href="#s28"><span class="n">28</span> كيف تُدرّس هذا للناس</a>
+    <a href="#s29"><span class="n">29</span> بروتوكول 30 يومًا</a>
+    <a href="#s30"><span class="n">30</span> المراجع وحدود العلم</a>
+  </div>
+</section>
+
+<!-- ================= 01 ================= -->
+<section class="page" id="s1">
+  <div class="page-head">
+    <div class="icon-badge"><span class="num">01</span>
+      <svg viewBox="0 0 24 24"><path d="M12 4.5a3 3 0 0 0-5.7-1.3A2.8 2.8 0 0 0 4 8.2a3 3 0 0 0 .6 4.4A2.9 2.9 0 0 0 7 17.7a3 3 0 0 0 5 1.3V4.5Z"/><path d="M12 4.5a3 3 0 0 1 5.7-1.3A2.8 2.8 0 0 1 20 8.2a3 3 0 0 1-.6 4.4 2.9 2.9 0 0 1-2.4 5.1 3 3 0 0 1-5 1.3"/><path d="M8.5 8.5h2M8.5 12h2M13.5 8.5h2M13.5 12h2"/></svg>
+    </div>
+    <div>
+      <h2 class="page-title"><small>الأساس التشريحي</small>خريطة الدماغ العاطفي</h2>
+      <p class="page-desc">قبل أي كلام عن الحب: أين يحدث فعلًا؟ سبع مناطق تكفي لفهم 90% من القصة.</p>
+    </div>
+  </div>
+
+  <p class="lead">الحب ليس «في القلب». القلب مضخة. الحب يُبنى في <strong>دائرة كهربائية–كيميائية</strong> تمتد من جذع الدماغ حتى مقدمة الفص الجبهي. وحين تفهم مكان كل قطعة، يصبح سلوكك — وسلوك الطرف الآخر — قابلًا للتنبؤ.</p>
+
+  <figure>
+    <svg viewBox="0 0 900 480" role="img" aria-label="مخطط تشريحي لمناطق الدماغ المرتبطة بالحب">
+      <defs>
+        <linearGradient id="brainFill" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#173156"/><stop offset="1" stop-color="#0b172b"/>
+        </linearGradient>
+        <radialGradient id="hot"><stop offset="0" stop-color="#ff6b8b" stop-opacity=".9"/><stop offset="1" stop-color="#ff6b8b" stop-opacity="0"/></radialGradient>
+        <radialGradient id="cool"><stop offset="0" stop-color="#2ee6c5" stop-opacity=".9"/><stop offset="1" stop-color="#2ee6c5" stop-opacity="0"/></radialGradient>
+      </defs>
+
+      <!-- القشرة المخية -->
+      <path d="M120 235 C110 150 190 70 300 62 C410 54 500 95 535 175 C552 215 548 255 530 290 C505 335 455 355 400 350 C360 346 340 330 315 320 C285 308 245 315 210 300 C160 280 128 265 120 235 Z"
+            fill="url(#brainFill)" stroke="#2ee6c5" stroke-opacity=".55" stroke-width="2"/>
+      <!-- تلافيف -->
+      <path d="M165 150 q40 22 78 8 M170 195 q45 26 88 10 M185 245 q42 22 80 6" stroke="#2ee6c5" stroke-opacity=".22" stroke-width="2" fill="none"/>
+      <path d="M400 100 q40 30 34 72 M455 130 q30 35 22 78" stroke="#2ee6c5" stroke-opacity=".22" stroke-width="2" fill="none"/>
+      <!-- المخيخ -->
+      <ellipse cx="470" cy="382" rx="66" ry="44" fill="url(#brainFill)" stroke="#2ee6c5" stroke-opacity=".45" stroke-width="2"/>
+      <path d="M430 372 q40 12 80 0 M432 392 q38 12 76 0" stroke="#2ee6c5" stroke-opacity=".28" stroke-width="1.6" fill="none"/>
+      <!-- جذع الدماغ -->
+      <path d="M395 335 q22 45 14 92 l-42 0 q6 -48 -8 -84 Z" fill="url(#brainFill)" stroke="#2ee6c5" stroke-opacity=".45" stroke-width="2"/>
+
+      <!-- هالات المناطق -->
+      <circle cx="170" cy="200" r="46" fill="url(#cool)"/>
+      <circle cx="282" cy="236" r="40" fill="url(#cool)"/>
+      <circle cx="302" cy="288" r="34" fill="url(#hot)"/>
+      <circle cx="352" cy="300" r="32" fill="url(#cool)"/>
+      <circle cx="392" cy="330" r="30" fill="url(#hot)"/>
+
+      <!-- نقاط -->
+      <circle cx="170" cy="200" r="6" fill="#2ee6c5"/><circle cx="282" cy="236" r="6" fill="#2ee6c5"/>
+      <circle cx="302" cy="288" r="6" fill="#ff6b8b"/><circle cx="352" cy="300" r="6" fill="#2ee6c5"/>
+      <circle cx="392" cy="330" r="6" fill="#f5c451"/>
+
+      <!-- خطوط دلالة -->
+      <path d="M170 200 L600 95" stroke="#2ee6c5" stroke-opacity=".35" stroke-dasharray="4 5"/>
+      <path d="M282 236 L600 165" stroke="#2ee6c5" stroke-opacity=".35" stroke-dasharray="4 5"/>
+      <path d="M302 288 L600 235" stroke="#ff6b8b" stroke-opacity=".45" stroke-dasharray="4 5"/>
+      <path d="M352 300 L600 305" stroke="#2ee6c5" stroke-opacity=".35" stroke-dasharray="4 5"/>
+      <path d="M392 330 L600 375" stroke="#f5c451" stroke-opacity=".45" stroke-dasharray="4 5"/>
+
+      <!-- التسميات -->
+      <text class="svg-label" text-anchor="middle" x="740" y="98">القشرة الجبهية (PFC)</text>
+      <text class="svg-small" text-anchor="middle" x="740" y="120">التخطيط · كبح الاندفاع · إعادة التقييم</text>
+
+      <text class="svg-label" text-anchor="middle" x="740" y="168">المخطط + النواة المتكئة</text>
+      <text class="svg-small" text-anchor="middle" x="740" y="190">الدوبامين · الرغبة · «أريده الآن»</text>
+
+      <text class="svg-label" text-anchor="middle" x="740" y="238">اللوزة الدماغية</text>
+      <text class="svg-small" text-anchor="middle" x="740" y="260">الخوف · الحذر · قراءة التهديد</text>
+
+      <text class="svg-label" text-anchor="middle" x="740" y="308">الحُصين</text>
+      <text class="svg-small" text-anchor="middle" x="740" y="330">الذاكرة العاطفية · السياق · الزمن</text>
+
+      <text class="svg-label" text-anchor="middle" x="740" y="378">منطقة السقيفة البطنية (VTA)</text>
+      <text class="svg-small" text-anchor="middle" x="740" y="400">مصنع الدوبامين · «وقود الشغف»</text>
+
+      <text class="svg-small" text-anchor="middle" x="300" y="450">مقطع جانبي مبسّط — المواضع تقريبية لأغراض تعليمية</text>
+    </svg>
+    <figcaption><b>مخطط 1:</b> المناطق الخمس الرئيسية في «دائرة الحب». اللون الوردي = مناطق الشغف/التهديد، التركوازي = مناطق التنظيم والذاكرة، الذهبي = مصدر الدوبامين.</figcaption>
+  </figure>
+
+  <h3>الدماغان: السريع والبطيء</h3>
+  <p>أهم فكرة في هذا الدليل كله: لديك <strong>مسارين</strong> يعملان بالتوازي.</p>
+  <div class="grid2">
+    <div class="card rose">
+      <span class="tag">المسار السريع</span>
+      <h4>اللوزة → ردّ الفعل (بالمللي ثانية)</h4>
+      <p>يستقبل الإحساس قبل أن تصله القشرة. يقرأ نبرة الصوت ونظرة العين ويطلق الحكم قبل أن «تعي». هنا يولد الغيرة المفاجئة، والانجذاب اللحظي، والخوف من الرفض.</p>
+      <p><em>سريع، لكنه أعمى تقريبًا للسياق.</em></p>
+    </div>
+    <div class="card">
+      <span class="tag">المسار البطيء</span>
+      <h4>القشرة الجبهية → الفهم (بالثواني)</h4>
+      <p>تبني القصة: «هو متأخر لأنه مشغول، لا لأنه لا يحبني». تُعيد التقييم، وتُهدّئ اللوزة، وتسمح بالصبر.</p>
+      <p><em>بطيء، لكنه يرى الصورة كاملة.</em></p>
+    </div>
+  </div>
+
+  <div class="key"><b>المفتاح العملي</b>كل صراع عاطفي هو سباق بين المسارين. من يرد في الثانية الأولى يخسر عادةً؛ من يمنح نفسه <strong>6–20 ثانية</strong> يعطي القشرة الجبهية فرصة تولّي القيادة. هذه ليست حكمة شعبية — هذه آلية عصبية.</div>
+
+  <h3>ثلاثة أنظمة لا نظام واحد</h3>
+  <p>الخطأ الأشهر: الظن أن «الحب» شيء واحد. المخ يشتغّل بثلاث دوائر منفصلة جزئيًا، يمكن أن تعمل معًا أو تتعارض — وهذا سرّ كثير من المعاناة.</p>
+  <div class="grid3">
+    <div class="card rose"><span class="tag">النظام 1</span><h4>الرغبة الجنسية</h4><p>هرمونات جنسية (تستوستيرون/إستروجين). تدفعك للبحث عن شريك — أي شريك مناسب.</p></div>
+    <div class="card" style="--x:0"><span class="tag">النظام 2</span><h4>الجذب الرومانسي</h4><p>دوبامين + نورأدرينالين. تركيز على شخص واحد بعينه، طاقة، سعادة، هوس.</p></div>
+    <div class="card violet"><span class="tag">النظام 3</span><h4>التعلّق</h4><p>أوكسيتوسين + فازوبريسين. هدوء، أمان، رغبة في القرب الدائم.</p></div>
+  </div>
+  <p>يمكن أن تكون <strong>راغبًا بلا جذب</strong> (علاقة جسدية بلا شغف)، أو <strong>مجذوبًا بلا تعلّق</strong> (هوس لا يستقر)، أو <strong>متعلقًا بلا جذب</strong> (صداقة عميقة بلا لهفة). الصحة ليست في وجود الثلاثة دائمًا، بل في معرفة أيّها يعمل الآن.</p>
+  <div class="ref">الإطار النظري: Fisher, Aron &amp; Brown (2006); Fisher (1998) — الأنظمة الثلاثة للحب.</div>
+</section>
+
+<!-- ================= 02 ================= -->
+<section class="page" id="s2">
+  <div class="page-head">
+    <div class="icon-badge"><span class="num">02</span>
+      <svg viewBox="0 0 24 24"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="M2 12l10 5 10-5"/><path d="M2 17l10 5 10-5"/></svg>
+    </div>
+    <div>
+      <h2 class="page-title"><small>الفصل النظري الأول</small>الأنظمة الثلاثة للحب</h2>
+      <p class="page-desc">لماذا يمكن أن تكره من تحبه؟ لأن ثلاثة أنظمة تعمل فيك بسرعات وأهداف مختلفة.</p>
+    </div>
+  </div>
+
+  <p class="lead">عالمة الأنثروبولوجيا <strong>هيلين فيشر</strong> لاحظت أن الحب الرومانسي ليس حالة واحدة، بل <em>ثلاث حالات عصبية</em> منفصلة، لكل منها كيمياء ووظيفة تطورية. تبدأ في مناطق مختلفة، وتُطفأ بسرعات مختلفة.</p>
+
+  <figure>
+    <svg viewBox="0 0 860 420" role="img" aria-label="الأنظمة الثلاثة للحب وشدتها عبر الزمن">
+      <text class="svg-title" x="430" y="26" text-anchor="middle">ثلاث منحنيات تعمل في الوقت نفسه</text>
+      <line x1="80" y1="350" x2="800" y2="350" stroke="#2ee6c5" stroke-opacity=".3"/>
+      <line x1="80" y1="350" x2="80" y2="70" stroke="#2ee6c5" stroke-opacity=".3"/>
+
+      <!-- الرغبة -->
+      <path d="M80 300 C200 290 320 280 460 276 C600 272 700 270 800 268" stroke="#f5c451" stroke-width="3" fill="none" stroke-dasharray="7 4"/>
+      <text class="svg-label" x="806" y="262" text-anchor="start" fill="#f5c451">الرغبة</text>
+      <text class="svg-small" x="806" y="282" text-anchor="start">ثابتة نسبيًا</text>
+
+      <!-- الجذب -->
+      <path d="M80 340 C140 330 180 140 250 110 C320 80 400 120 470 190 C540 258 620 300 800 320" stroke="#ff6b8b" stroke-width="4" fill="none"/>
+      <text class="svg-label" x="806" y="314" text-anchor="start" fill="#ff6b8b">الجذب</text>
+      <text class="svg-small" x="806" y="334" text-anchor="start">ذروة ثم هبوط</text>
+
+      <!-- التعلّق -->
+      <path d="M80 345 C220 340 300 300 420 250 C540 200 640 175 800 160" stroke="#2ee6c5" stroke-width="4" fill="none"/>
+      <text class="svg-label" x="806" y="154" text-anchor="start" fill="#2ee6c5">التعلّق</text>
+      <text class="svg-small" x="806" y="174" text-anchor="start">صاعد ببطء وثبات</text>
+
+      <text class="svg-small" x="80" y="375">التعارف</text>
+      <text class="svg-small" x="300" y="375">أشهر 1–6</text>
+      <text class="svg-small" x="500" y="375">سنة</text>
+      <text class="svg-small" x="700" y="375">سنوات</text>
+      <text class="svg-small" x="30" y="90" transform="rotate(-90 30 90)">الشدة</text>
+    </svg>
+    <figcaption><b>مخطط 2:</b> التعارض الجوهري — الجذب يهبط بينما التعلّق يصعد. الفجوة بين المنحنيين في الشهر 6–18 هي «أخطر منعطف» في أي علاقة.</figcaption>
+  </figure>
+
+  <table>
+    <tr><th>البُعد</th><th>الرغبة</th><th>الجذب</th><th>التعلّق</th></tr>
+    <tr><td>الوقود الكيميائي</td><td>تستوستيرون، إستروجين</td><td>دوبامين، نورأدرينالين، سيروتونين منخفض</td><td>أوكسيتوسين، فازوبريسين، إندورفينات</td></tr>
+    <tr><td>المناطق الرئيسية</td><td>تحت المهاد، اللوزة</td><td>VTA، النواة المتكئة، المخطط</td><td>الجزيرة، القشرة الحزامية، السبتوم</td></tr>
+    <tr><td>الشعور</td><td>«أريده»</td><td>«لا أستطيع التفكير في غيره»</td><td>«أشعر بالأمان معه»</td></tr>
+    <tr><td>السلوك</td><td>بحث، مغازلة</td><td>مطاردة، تركيز، هوس</td><td>رعاية، حماية، مشاركة الحياة</td></tr>
+    <tr><td>المدة النموذجية</td><td>متغيّرة، تتبع الهرمونات</td><td>12–24 شهرًا في الغالب</td><td>يمكن أن تدوم عقودًا</td></tr>
+    <tr><td>عند الانقطاع</td><td>إحباط جسدي</td><td>ألم حادّ، هوس، انتكاس</td><td>حزن عميق يشبه الفقد</td></tr>
+  </table>
+
+  <div class="key"><b>لماذا هذا مهم لك؟</b>معظم الناس يظنون أن هبوط الشغف يعني «انتهاء الحب». علميًا، هذا ليس نهاية — بل <strong>انتقال</strong> من نظام 2 إلى نظام 3. من يفهم هذا ينجو من الفجوة؛ ومن لا يفهمها يفسّرها خيانةً أو فشلًا ويترك علاقة سليمة.</div>
+
+  <div class="quote">«الحب ليس عاطفة واحدة، بل غريزة تطورية لها ثلاثة وجوه: الرغبة، الجذب، والتعلّق.»</div>
+</section>
+
+<!-- ================= 03 ================= -->
+<section class="page" id="s3">
+  <div class="page-head">
+    <div class="icon-badge"><span class="num">03</span>
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M19 5l-3 3M8 16l-3 3"/></svg>
+    </div>
+    <div>
+      <h2 class="page-title"><small>الكيمياء الأولى</small>دائرة المكافأة والدوبامين</h2>
+      <p class="page-desc">الدوبامين ليس «هرمون السعادة». إنه هرمون <em>الرغبة في المزيد</em> — وهذا فرق يغيّر حياتك.</p>
+    </div>
+  </div>
+
+  <p class="lead">كل ما تفعله بحثًا عن الحب يمرّ عبر دائرة واحدة قديمة جدًا، موجودة في الأسماك والطيور والبشر: <strong>دائرة المكافأة</strong>. مهمتها ليست أن تُسعدك، بل أن <em>تدفعك للتصرف</em>.</p>
+
+  <figure>
+    <svg viewBox="0 0 860 460" role="img" aria-label="دائرة المكافأة في الدماغ">
+      <defs><marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0 L8 3 L0 6 Z" fill="#2ee6c5"/></marker></defs>
+      <!-- صناديق -->
+      <g>
+        <rect x="60" y="70" width="230" height="82" rx="16" fill="rgba(255,107,139,.1)" stroke="#ff6b8b" stroke-opacity=".6"/>
+        <text class="svg-label" x="175" y="103" text-anchor="middle" fill="#ff9db1">المُنبّه</text>
+        <text class="svg-small" x="175" y="126" text-anchor="middle">رسالة، نظرة، صورة، نبرة صوت</text>
+
+        <rect x="60" y="250" width="230" height="82" rx="16" fill="rgba(46,230,197,.08)" stroke="#2ee6c5" stroke-opacity=".55"/>
+        <text class="svg-label" x="175" y="283" text-anchor="middle">التقييم العاطفي</text>
+        <text class="svg-small" x="175" y="306" text-anchor="middle">اللوزة + الجزيرة: «مهم؟ مثير؟»</text>
+
+        <rect x="360" y="250" width="200" height="82" rx="16" fill="rgba(245,196,81,.08)" stroke="#f5c451" stroke-opacity=".55"/>
+        <text class="svg-label" x="460" y="283" text-anchor="middle" fill="#f5c451">VTA</text>
+        <text class="svg-small" x="460" y="306" text-anchor="middle">إطلاق الدوبامين</text>
+
+        <rect x="620" y="250" width="200" height="82" rx="16" fill="rgba(139,123,255,.1)" stroke="#8b7bff" stroke-opacity=".6"/>
+        <text class="svg-label" x="720" y="283" text-anchor="middle" fill="#b9aeff">النواة المتكئة</text>
+        <text class="svg-small" x="720" y="306" text-anchor="middle">«هذا يستحق السعي»</text>
+
+        <rect x="620" y="70" width="200" height="82" rx="16" fill="rgba(46,230,197,.08)" stroke="#2ee6c5" stroke-opacity=".55"/>
+        <text class="svg-label" x="720" y="103" text-anchor="middle">القشرة الجبهية</text>
+        <text class="svg-small" x="720" y="126" text-anchor="middle">التركيز + خطة الاقتراب</text>
+
+        <rect x="360" y="70" width="200" height="82" rx="16" fill="rgba(255,107,139,.08)" stroke="#ff6b8b" stroke-opacity=".45"/>
+        <text class="svg-label" x="460" y="103" text-anchor="middle" fill="#ff9db1">السلوك</text>
+        <text class="svg-small" x="460" y="126" text-anchor="middle">رسالة، مكالمة، لقاء</text>
+      </g>
+      <!-- أسهم -->
+      <path d="M175 152 L175 246" stroke="#2ee6c5" stroke-width="2.4" fill="none" marker-end="url(#ar)"/>
+      <path d="M290 291 L356 291" stroke="#2ee6c5" stroke-width="2.4" fill="none" marker-end="url(#ar)"/>
+      <path d="M560 291 L616 291" stroke="#2ee6c5" stroke-width="2.4" fill="none" marker-end="url(#ar)"/>
+      <path d="M720 250 L720 156" stroke="#2ee6c5" stroke-width="2.4" fill="none" marker-end="url(#ar)"/>
+      <path d="M620 111 L564 111" stroke="#2ee6c5" stroke-width="2.4" fill="none" marker-end="url(#ar)"/>
+      <path d="M360 111 L290 111" stroke="#2ee6c5" stroke-width="2.4" fill="none" marker-end="url(#ar)"/>
+      <path d="M175 70 C175 30 460 20 460 60" stroke="#f5c451" stroke-width="2" fill="none" stroke-dasharray="5 5" marker-end="url(#ar)"/>
+      <text class="svg-small" x="315" y="34" text-anchor="middle" fill="#f5c451">توقّع المكافأة</text>
+
+      <text class="svg-small" x="430" y="410" text-anchor="middle">كل دورة تُقوّي الوصلة العصبية: «هذا الشخص = مكافأة»</text>
+    </svg>
+    <figcaption><b>مخطط 3:</b> الحلقة الكاملة. لاحظ أن السلوك يعود ليغذي المُنبّه — لذلك الحب يتحوّل إلى عادة، والعادة تتحوّل إلى حاجة.</figcaption>
+  </figure>
+
+  <h3>خطأ التوقع: السرّ الذي يفسّر «البرود المفاجئ»</h3>
+  <p>عالم الأعصاب <strong>فولفرام شولتز</strong> اكتشف أن خلايا الدوبامين لا تستجيب للمكافأة نفسها، بل <em>للفرق بين ما توقعته وما حدث</em>. النتيجة العملية مذهلة:</p>
+  <ul class="clean">
+    <li><strong>مكافأة أكبر من التوقع</strong> → دفعة دوبامين قوية (رسالة أولى من شخص يعجبك).</li>
+    <li><strong>مكافأة مطابقة للتوقع</strong> → استجابة ضعيفة (الرسالة رقم 400 من نفس الشخص).</li>
+    <li><strong>مكافأة أقل من التوقع</strong> → انخفاض تحت خط الأساس (شعور بالخيبة والبرود).</li>
+  </ul>
+  <p>لهذا يشعر الحب الأول بالجنون، ويشعر الحب المستقر بالهدوء: ليس لأن الثاني أقل قيمة، بل لأن <strong>التوقع ارتفع</strong>. الدماغ لا يقيس السعادة، بل يقيس المفاجأة.</p>
+
+  <div class="grid2">
+    <div class="card gold"><span class="tag">تطبيق 1</span><h4>اصنع مفاجآت صغيرة متجددة</h4><p>تغيير الروتين (مكان، مبادرة، لغة حب مختلفة) يعيد إطلاق «خطأ التوقع» الإيجابي — دون الحاجة إلى شخص جديد.</p></div>
+    <div class="card gold"><span class="tag">تطبيق 2</span><h4>احذر مفاجآت «الحب السام»</h4><p>التعزيز المتقطع (سخاء ثم برود ثم سخاء) يولّد أقوى إدمان دوباميني. من يجعلك تعيش على الأمل، يتحكم فيك كيميائيًا.</p></div>
+  </div>
+
+  <div class="key"><b>تعريف دقيق</b>الدوبامين = «الرغبة والسعي» (wanting). السيروتونين والإندورفين = «الرضا والهدوء» (liking). الفرق بينهما هو الفرق بين <em>من تريده</em> و<em>من يرتاح له قلبك</em>. كثيرون يختارون الأول ويظنونه الثاني.</div>
+</section>
+
+<!-- ================= 04 ================= -->
+<section class="page" id="s4">
+  <div class="page-head">
+    <div class="icon-badge"><span class="num">04</span>
+      <svg viewBox="0 0 24 24"><path d="M9 2h6v5l4 9a4 4 0 0 1-3.6 6H8.6A4 4 0 0 1 5 16l4-9V2Z"/><path d="M6 14h12"/></svg>
+    </div>
+    <div>
+      <h2 class="page-title"><small>أول أسبوع</small>كيمياء الوقوع في الحب</h2>
+      <p class="page-desc">ماذا يحدث في جسمك حرفيًا في الأيام الأولى؟ أربع مواد تصنع «الجنون الجميل».</p>
+    </div>
+  </div>
+
+  <p class="lead">في المرحلة الأولى لا تكون سعيدًا فقط — أنت <strong>مُفعَّل</strong> كأنك في حالة طوارئ ممتعة. القلب يتسارع، النوم يقلّ، الشهية تنخفض، والذهن لا يفارق شخصًا واحدًا. هذه ليست مجازًا: إنها كيمياء قابلة للقياس.</p>
+
+  <figure>
+    <svg viewBox="0 0 860 400" role="img" aria-label="تغير المواد العصبية في مرحلة الوقوع في الحب">
+      <line x1="70" y1="330" x2="810" y2="330" stroke="#2ee6c5" stroke-opacity=".3"/>
+      <line x1="70" y1="330" x2="70" y2="60" stroke="#2ee6c5" stroke-opacity=".3"/>
+
+      <!-- دوبامين -->
+      <path d="M70 250 C160 250 220 120 300 105 C400 88 470 140 560 195 C640 245 720 265 810 275" stroke="#f5c451" stroke-width="3.5" fill="none"/>
+      <text class="svg-label" x="600" y="180" fill="#f5c451">دوبامين ↑</text>
+
+      <!-- نورأدرينالين -->
+      <path d="M70 270 C170 268 230 150 320 140 C420 130 500 185 600 230" stroke="#ff6b8b" stroke-width="3" fill="none" stroke-dasharray="6 4"/>
+      <text class="svg-label" x="500" y="120" fill="#ff6b8b">نورأدرينالين ↑</text>
+
+      <!-- سيروتونين -->
+      <path d="M70 200 C160 215 230 290 330 300 C430 310 520 290 640 300" stroke="#2ee6c5" stroke-width="3" fill="none"/>
+      <text class="svg-label" x="330" y="330" fill="#2ee6c5">سيروتونين ↓</text>
+
+      <text class="svg-small" x="70" y="355">الأسبوع 1</text>
+      <text class="svg-small" x="330" y="355">الشهر 1–3</text>
+      <text class="svg-small" x="620" y="355">الشهر 6+</text>
+      <text class="svg-small" x="24" y="80" transform="rotate(-90 24 80)">المستوى</text>
+    </svg>
+    <figcaption><b>مخطط 4:</b> ثلاث مواد تتحرك في اتجاهات مختلفة. انخفاض السيروتونين هو ما يجعل التفكير وسواسيًا — وهو نفس ما يحدث في اضطراب الوسواس القهري.</figcaption>
+  </figure>
+
+  <div class="grid2">
+    <div class="card gold"><span class="tag">المادة 1</span><h4>الدوبامين — «أريده»</h4>
+      <p>يُفرز من VTA نحو النواة المتكئة. يمنح الطاقة، التركيز، والاندفاع. يجعلك تقود ساعة كاملة لمجرد رؤيته.</p>
+      <p><em>الزيادة لا تعني السعادة، بل تعني «السعي».</em></p></div>
+    <div class="card rose"><span class="tag">المادة 2</span><h4>النورأدرينالين — «قلبي يدق»</h4>
+      <p>ناقل «الاستنفار». يرفع ضربات القلب، يوسّع الحدقة، ويجعل الذاكرة تسجّل التفاصيل بحدّة مفرطة (لهذا تتذكر لون قميصه في أول لقاء).</p></div>
+    <div class="card"><span class="tag">المادة 3</span><h4>انخفاض السيروتونين — «لا أفكر في غيره»</h4>
+      <p>دراسة مارازيتي وزملائه (1999) وجدت أن كثافة ناقلات السيروتونين في دم العاشقين الجدد تشبه ما يُلاحظ في الوسواس القهري.</p>
+      <p><em>هذا يفسّر التفكير القهري، لا «ضعف الشخصية».</em></p></div>
+    <div class="card violet"><span class="tag">المادة 4</span><h4>الأدرينالين والكورتيزول — «الخوف اللذيذ»</h4>
+      <p>محور HPA يفرز الكورتيزول في المواقف الجديدة. هذا هو سبب كون اللقاء الأول في مكان مثير (ملاهي، رياضة) أكثر جذبًا — الإثارة تُنسب خطأً للشخص.</p></div>
+  </div>
+
+  <h3>خطأ الإسناد: لماذا يبدو الخطر جاذبًا؟</h3>
+  <p>الدماغ يفسّر الإثارة الجسدية بحسب <strong>السياق المتاح</strong>. إذا ارتفع نبضك بسبب الخوف أو الرياضة وأنت مع شخص، فمن المحتمل أن تنسب الارتفاع إليه. هذا ما يسمّى <em>التأثير التحريضي</em> (Misattribution of Arousal) — وهو أساس كثير من «الحب في لحظة خطرة».</p>
+  <div class="warn key"><b>تحذير عملي</b>العلاقة التي تبدأ في حالة تهديد مستمر (سرّية، صراع، عدم استقرار) قد تبدو <strong>أشد شغفًا</strong> — لكن الشدّة هنا من الأدرينالين، لا من التوافق. اسأل نفسك: «هل أحبه في الهدوء أيضًا؟»</div>
+
+  <div class="key"><b>خلاصة قابلة للتدريس</b>في أول 6 أشهر أنت لا ترى الشخص، بل ترى <em>خليطًا من الدوبامين والأدرينالين في صورة شخص</em>. هذا ليس عيبًا — هو مرحلة. لكن القرارات الكبرى (زواج، انتقال، ترك عمل) يجب أن تُؤجَّل حتى تعود الكيمياء إلى مستواها.</div>
+</section>
+
+<!-- ================= 05 ================= -->
+<section class="page" id="s5">
+  <div class="page-head">
+    <div class="icon-badge"><span class="num">05</span>
+      <svg viewBox="0 0 24 24"><path d="M12 3 3 7v6c0 5 3.8 7.5 9 8 5.2-.5 9-3 9-8V7l-9-4Z"/><path d="M12 9v4M12 16.5v.5"/></svg>
+    </div>
+    <div>
+      <h2 class="page-title"><small>نظام التهديد</small>اللوزة: مصنع الخوف من الرفض</h2>
+      <p class="page-desc">لماذا يؤلم الرفض كأنه ألم جسدي؟ لأن الدماغ يستخدم نفس الدوائر.</p>
+    </div>
+  </div>
+
+  <p class="lead">اللوزة (Amygdala) كتلة صغيرة بحجم حبة لوز، لكنها <strong>جهاز الإنذار المركزي</strong>. مهمتها: فحص كل شيء بحثًا عن تهديد، قبل أن تعي أنت. في الحب، أكبر تهديد ليس أسدًا — بل <em>احتمال أن لا يكون الطرف الآخر مهتمًا</em>.</p>
+
+  <h3>الألم الاجتماعي = ألم جسدي</h3>
+  <p>دراسة <strong>أيزنبرجر وزملائه (2003)</strong> صوّرت أدمغة أشخاص يلعبون لعبة إقصاء اجتماعي؛ فوجدت تنشيطًا في <em>القشرة الحزامية الأمامية الظهرية (dACC)</em> والجزيرة — وهما نفس المنطقتين المرتبطتين بالألم الجسدي. بمعنى آخر: الرفض لا «يُشبه» الألم، بل يستخدم <strong>نفس الأسلاك</strong>.</p>
+
+  <figure>
+    <svg viewBox="0 0 840 340" role="img" aria-label="مسار الخوف من الرفض">
+      <rect x="30" y="120" width="150" height="80" rx="14" fill="rgba(255,107,139,.1)" stroke="#ff6b8b" stroke-opacity=".5"/>
+      <text class="svg-label" x="105" y="152" text-anchor="middle">إشارة غامضة</text>
+      <text class="svg-small" x="105" y="176" text-anchor="middle">«تأخر في الرد»</text>
+
+      <rect x="250" y="120" width="160" height="80" rx="14" fill="rgba(255,107,139,.16)" stroke="#ff6b8b" stroke-opacity=".7"/>
+      <text class="svg-label" x="330" y="152" text-anchor="middle" fill="#ff9db1">اللوزة</text>
+      <text class="svg-small" x="330" y="176" text-anchor="middle">«تهديد! ارفض قبل أن تُرفض»</text>
+
+      <rect x="480" y="40" width="180" height="76" rx="14" fill="rgba(245,196,81,.08)" stroke="#f5c451" stroke-opacity=".5"/>
+      <text class="svg-label" x="570" y="72" text-anchor="middle" fill="#f5c451">جسمك</text>
+      <text class="svg-small" x="570" y="96" text-anchor="middle">توتر، غثيان، سهر</text>
+
+      <rect x="480" y="200" width="180" height="76" rx="14" fill="rgba(139,123,255,.1)" stroke="#8b7bff" stroke-opacity=".5"/>
+      <text class="svg-label" x="570" y="232" text-anchor="middle" fill="#b9aeff">سلوك دفاعي</text>
+      <text class="svg-small" x="570" y="256" text-anchor="middle">هجوم · انسحاب · تجمّد</text>
+
+      <rect x="710" y="120" width="100" height="80" rx="14" fill="rgba(46,230,197,.08)" stroke="#2ee6c5" stroke-opacity=".5"/>
+      <text class="svg-label" x="760" y="152" text-anchor="middle" fill="#2ee6c5">نتيجة</text>
+      <text class="svg-small" x="760" y="176" text-anchor="middle">تصعيد</text>
+
+      <path d="M180 160 L246 160" stroke="#ff6b8b" stroke-width="2.4" fill="none"/>
+      <path d="M410 145 C440 130 450 90 476 78" stroke="#ff6b8b" stroke-width="2.4" fill="none"/>
+      <path d="M410 180 C440 195 450 235 476 240" stroke="#ff6b8b" stroke-width="2.4" fill="none"/>
+      <path d="M660 240 C700 235 715 200 720 200" stroke="#8b7bff" stroke-width="2" fill="none" stroke-dasharray="4 4"/>
+      <text class="svg-small" x="420" y="300" text-anchor="middle">التفسير الخاطئ يحوّل رسالة متأخرة إلى كارثة</text>
+    </svg>
+    <figcaption><b>مخطط 5:</b> اللوزة لا تنتظر الدليل. تتفاعل مع الغموض كأنه تهديد، ثم يبحث العقل عن تبرير — لا العكس.</figcaption>
+  </figure>
+
+  <h3>الثلاثة ردود: قاتل، هارب، متجمّد</h3>
+  <p>عند التنشيط الشديد، يختار الجسم أحد ثلاثة مسارات — وكلك منها يظهر في العلاقات:</p>
+  <table>
+    <tr><th>الرد</th><th>في العلاقة</th><th>ما يقوله الطرف الآخر</th></tr>
+    <tr><td><strong>هجوم</strong> (Fight)</td><td>اتهام، نقد، رسائل غاضبة متتابعة</td><td>«أنت عدائي ومتطلب»</td></tr>
+    <tr><td><strong>هروب</strong> (Flight)</td><td>انسحاب، تجاهل، «أحتاج مساحة»</td><td>«أنت بارد ولا تهتم»</td></tr>
+    <tr><td><strong>تجمّد</strong> (Freeze)</td><td>صمت، تشتت، عدم قدرة على الرد</td><td>«أنت لا تبالي»</td></tr>
+  </table>
+
+  <div class="key"><b>المفتاح</b>لا تحكم على شريكك من سلوكه في لحظة التهديد؛ اسأل: <em>أي رد دفاعي يعمل الآن؟</em> ثم خاطب النظام، لا الشخص. جملة مثل «أشعر أنك تحتاج مساحة، وأنا أحتاج طمأنة — هل نتحدث بعد 20 دقيقة؟» تُخرج اللوزة من القيادة.</div>
+</section>
+
+<!-- ================= 06 ================= -->
+<section class="page" id="s6">
+  <div class="page-head">
+    <div class="icon-badge"><span class="num">06</span>
+      <svg viewBox="0 0 24 24"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg>
+    </div>
+    <div>
+      <h2 class="page-title"><small>الانطباع الأول</small>كيف يقرأ الدماغ وجه الحبيب؟</h2>
+      <p class="page-desc">في أقل من عُشر ثانية، يصدر حكمًا. لكن الحكم ليس عن الجمال — بل عن الأمان.</p>
+    </div>
+  </div>
+
+  <p class="lead">الوجه هو أكثر منظر يُتقن الدماغ قراءته. هناك مناطق مخصّصة له تمامًا (Fusiform Face Area)، وشبكة كاملة تحلّل: هل هذا الشخص <em>آمن؟ مهتم؟ مثلنا؟</em></p>
+
+  <div class="grid2">
+    <div class="card"><span class="tag">المنطقة 1</span><h4>التلفيف المغزلي (FFA)</h4><p>يتعرّف على الوجه كهوية. يُنشّط بقوة عند رؤية وجه الحبيب — لكن ليس عند رؤية وجه غريب، حتى لو كان أجمل موضوعيًا.</p></div>
+    <div class="card"><span class="tag">المنطقة 2</span><h4>التلم الصدغي العلوي (STS)</h4><p>يقرأ <em>النية</em>: هل النظرة ودّية أم متحدّية؟ هل الابتسامة حقيقية؟ هو ما يجعلك تشعر بـ«شيء ما غير طبيعي في نظرته».</p></div>
+    <div class="card"><span class="tag">المنطقة 3</span><h4>الجزيرة الأمامية</h4><p>تحوّل إحساس الجسد إلى شعور: «معدتي تنقلب» عند رؤيته. هنا يتحوّل الجسد إلى عاطفة واعية.</p></div>
+    <div class="card"><span class="tag">المنطقة 4</span><h4>القشرة الحزامية الأمامية</h4><p>تراقب الألم والرفض والتجاهل. تنشط حين يمرّ شخص عابر بلا سلام، أو حين يقرأ رسالتك ولا يردّ.</p></div>
+  </div>
+
+  <h3>الابتسامة الحقيقية: اختبار Duchenne</h3>
+  <p>الابتسامة الصادقة تُشغّل عضلة <strong>العين الجانبية</strong> (orbicularis oculi) بجانب عضلة الفم — وهذا ما يسمّى ابتسامة دوشين. الدماغ يميّزها تلقائيًا في نحو 100 مللي ثانية، وأكثر من ذلك: <em>يستجيب لها بمشاعر إيجابية متبادلة</em>. أما الابتسامة الاجتماعية (بالفم فقط) فتُقرأ كأدب لا كدفء.</p>
+
+  <div class="key"><b>تطبيق في أول لقاء</b>لا تحاول «إبهار» الطرف الآخر بقدر ما تحاول <strong>إشعاره بالأمان</strong>: تواصل بصري معتدل، ابتسامة تصل للعين، ونبرة أبطأ. اللوزة عند الطرف الآخر تقرر قبل منطقه.</div>
+
+  <div class="ref">Ortigue et al. (2010) — مراجعة تصوير عصبي للحب: الحب يمكن أن يُعالَج في نحو خُمس الثانية، ويشمل مناطق متعددة تتجاوز «دائرة المكافأة» وحدها.</div>
+</section>
+
+<!-- ================= 07 ================= -->
+<section class="page" id="s7">
+  <div class="page-head">
+    <div class="icon-badge"><span class="num">07</span>
+      <svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10Z"/><path d="M9 11h6M12 8v6"/></svg>
+    </div>
+    <div>
+      <h2 class="page-title"><small>كيمياء الالتصاق</small>الأوكسيتوسين والفازوبريسين</h2>
+      <p class="page-desc">«هرمون الحب» — لكن الحكاية أعقد بكثير مما يُقال في السوشيال ميديا.</p>
+    </div>
+  </div>
+
+  <p class="lead">إذا كان الدوبامين وقودَ <em>السعي</em>، فالأوكسيتوسين والفازوبريسين هما مادة <em>البناء</em>: يحوّلان العلاقة من مطاردة إلى مسكن.</p>
+
+  <h3>ماذا يفعلان فعلًا؟</h3>
+  <ul class="clean">
+    <li><strong>الأوكسيتوسين:</strong> يُفرز عند اللمس، الاحتضان، الولادة، الرضاعة، والنظر في العينين. يخفض نشاط اللوزة تجاه التهديد الاجتماعي، ويزيد الثقة داخل <em>الدائرة الداخلية</em> — لا مع الغرباء.</li>
+    <li><strong>الفازوبريسين:</strong> أكثر ارتباطًا بالسلوك الذكوري في الدراسات الحيوانية (الحماية، الحراسة، العدوانية تجاه المنافس). في البشر، يرتبط بالترابط الزوجي والدفاع عن العلاقة.</li>
+    <li><strong>الإندورفينات:</strong> مسكّنات الألم الطبيعية. تُفرز باللمس المتكرر والضحك المشترك، وهي المسؤولة عن شعور «الراحة» مع شخص اعتدت عليه.</li>
+  </ul>
+
+  <div class="warn key"><b>تصحيح علمي مهم</b>الأوكسيتوسين ليس «هرمون الحب» الخيّر دائمًا. الدراسات تُظهر أنه يزيد <strong>التحيّز للمجموعة الداخلية</strong> — أي يزيد اللطف مع «أهلنا» وقد يزيد الحذر من «الغرباء». كما أن نتائج الدراسات على رشّ الأوكسيتوسين بالأنف فيها تفاوت كبير في التكرار. فكرة «بخّة أوكسيتوسين تُصلح علاقتك» لا يدعمها الدليل الحالي.</div>
+
+  <h3>جدول الفروق العملية</h3>
+  <table>
+    <tr><th>الموقف</th><th>ما يُفرز</th><th>الأثر النفسي</th></tr>
+    <tr><td>احتضان 20 ثانية</td><td>أوكسيتوسين + إندورفين</td><td>تهدئة، انخفاض الكورتيزول</td></tr>
+    <tr><td>نظر متبادل 2–3 دقائق</td><td>أوكسيتوسين</td><td>قرب، انكشاف، خجل إيجابي</td></tr>
+    <tr><td>جماع / حميمية جسدية</td><td>أوكسيتوسين + دوبامين + برولاكتين</td><td>ترابط عميق + نعاس + رضا</td></tr>
+    <tr><td>ضحك مشترك</td><td>إندورفين</td><td>تخفيف الألم، «نحن فريق»</td></tr>
+    <tr><td>فراق طويل</td><td>انخفاض أوكسيتوسين + ارتفاع كورتيزول</td><td>قلق، شوق، اضطراب نوم</td></tr>
+  </table>
+
+  <div class="key"><b>المفتاح</b>الترابط لا يُبنى بالكلام عن الحب، بل بـ<strong>اللمس المتكرر والانتباه المشترك</strong>. ثمانية عشر ثانية احتضان يوميًا تفعل ما لا تفعله ساعة من الرسائل.</div>
+</section>
+
+<!-- ================= 08 ================= -->
+<section class="page" id="s8">
+  <div class="page-head">
+    <div class="icon-badge"><span class="num">08</span>
+      <svg viewBox="0 0 24 24"><path d="M3 12h3l2-6 3 12 3-9 2 3h5"/></svg>
+    </div>
+    <div>
+      <h2 class="page-title"><small>الجسد أولًا</small>لماذا نشعر بـ«الفراشات»؟</h2>
+      <p class="page-desc">محور الغدة الكظرية: كيف يتحوّل التوتر إلى لهفة، واللهفة إلى إدمان.</p>
+    </div>
+  </div>
+
+  <p class="lead">الفراشات في المعدة ليست مجازًا شعريًا. معدتك بها <strong>شبكة عصبية</strong> تصل إلى مئة مليون خلية عصبية — ما يسميه الباحثون «الدماغ الثاني». وحين يُفرَز الكورتيزول والأدرينالين، تتباطأ الهضم، ويُعاد توجيه الدم — فتشعر بالرفرفة.</p>
+
+  <h3>محور HPA في أربع خطوات</h3>
+  <ol class="steps">
+    <li><strong>الوطاء (Hypothalamus)</strong> يفرز CRH استجابةً للتوتر أو الإثارة.</li>
+    <li><strong>الغدة النخامية</strong> تفرز ACTH في الدم.</li>
+    <li><strong>الكظرية</strong> تفرز الكورتيزول والأدرينالين.</li>
+    <li><strong>الجسم</strong> يستنفر: قلب أسرع، تنفّس أعمق، تركيز أضيق — وهذا بالضبط ما نسمّيه «اللهفة».</li>
+  </ol>
+
+  <div class="grid2">
+    <div class="card gold"><span class="tag">الوجه الإيجابي</span><h4>إثارة تُقرَّب</h4><p>كورتيزول قصير الأمد + دوبامين = حماس، إبداع، شجاعة في التعبير. هذا هو «الوقوع» الصحي.</p></div>
+    <div class="card rose"><span class="tag">الوجه السلبي</span><h4>إثارة تُستنزف</h4><p>كورتيزول مزمن = قلق، اضطراب نوم، ضعف مناعة، وتشنّج في العلاقة. الحب الذي يُبقيك في حالة إنذار دائم يُمرضك فعليًا.</p></div>
+  </div>
+
+  <div class="warn key"><b>علامة تحذير</b>إذا كانت العلاقة تُشعرك بالراحة في 80% من الوقت وتوتر في 20%، فهي طبيعية. أما إذا كانت العكس — هدوء نادر وتوتر غالب — فأنت لا تحب، بل <strong>تعيش في حالة استنفار مزمن</strong>، والدماغ يسمّي ذلك «شغفًا» لأنه لا يملك كلمة أخرى.</div>
+</section>
+
+<!-- ================= 09 ================= -->
+<section class="page" id="s9">
+  <div class="page-head">
+    <div class="icon-badge"><span class="num">09</span>
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+    </div>
+    <div>
+      <h2 class="page-title"><small>الخريطة الزمنية</small>خط زمن العلاقة كاملًا</h2>
+      <p class="page-desc">خمس مراحل، ولكل مرحلة دماغ مختلف. من يعرف في أي مرحلة هو، يعرف ماذا يفعل.</p>
+    </div>
+  </div>
+
+  <p class="lead">لا توجد علاقة «تسير» بشكل عشوائي. هناك <strong>مسار متوقع</strong> تعرفه أبحاث العلاقات منذ عقود — والاختلاف بين علاقة ناجحة وأخرى فاشلة ليس في غياب الأزمة، بل في <em>توقيت</em> الأزمة وطريقة عبورها.</p>
+
+  <figure>
+    <svg viewBox="0 0 900 430" role="img" aria-label="خط زمن مراحل العلاقة">
+      <defs><linearGradient id="curveG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ff6b8b"/><stop offset=".5" stop-color="#f5c451"/><stop offset="1" stop-color="#2ee6c5"/></linearGradient></defs>
+      <line x1="60" y1="330" x2="860" y2="330" stroke="#93a4c4" stroke-opacity=".35"/>
+      <!-- منحنى -->
+      <path d="M60 300 C120 285 150 110 210 95 C265 82 300 130 360 175 C420 220 470 235 540 245 C630 258 720 250 860 240"
+            stroke="url(#curveG)" stroke-width="5" fill="none"/>
+      <!-- محطات -->
+      <circle cx="210" cy="95" r="9" fill="#ff6b8b"/>
+      <circle cx="360" cy="175" r="9" fill="#f5c451"/>
+      <circle cx="540" cy="245" r="9" fill="#2ee6c5"/>
+      <circle cx="700" cy="244" r="9" fill="#2ee6c5"/>
+      <circle cx="830" cy="241" r="9" fill="#8b7bff"/>
+
+      <text class="svg-label" x="210" y="60" text-anchor="middle" fill="#ff9db1">1. الاندماج</text>
+      <text class="svg-small" x="210" y="42" text-anchor="middle">0–3 أشهر</text>
+
+      <text class="svg-label" x="385" y="140" text-anchor="middle" fill="#f5c451">2. التثبيت</text>
+      <text class="svg-small" x="385" y="122" text-anchor="middle">3–12 شهرًا</text>
+
+      <text class="svg-label" x="560" y="285" text-anchor="middle" fill="#2ee6c5">3. الفجوة</text>
+      <text class="svg-small" x="560" y="307" text-anchor="middle">1–2 سنة</text>
+
+      <text class="svg-label" x="710" y="285" text-anchor="middle" fill="#2ee6c5">4. الرفقة</text>
+      <text class="svg-small" x="710" y="307" text-anchor="middle">2–5 سنوات</text>
+
+      <text class="svg-label" x="818" y="215" text-anchor="middle" fill="#b9aeff">5. النضج</text>
+      <text class="svg-small" x="818" y="197" text-anchor="middle">5+</text>
+
+      <!-- منطقة الخطر -->
+      <rect x="480" y="330" width="170" height="10" rx="5" fill="rgba(255,107,139,.35)"/>
+      <text class="svg-small" x="565" y="362" text-anchor="middle" fill="#ff9db1">منطقة الخطر: أكثر الانفصالات تحدث هنا</text>
+
+      <text class="svg-small" x="60" y="362" fill="#93a4c4">الشدة</text>
+    </svg>
+    <figcaption><b>مخطط 6:</b> المنحنى ليس «موت الحب»، بل تغيّر في نوعه. الخطوة الحادة في المنتصف هي ما يفسّره الناس خطأً بأنه «فشل».</figcaption>
+  </figure>
+
+  <table>
+    <tr><th>المرحلة</th><th>المدة</th><th>الدماغ</th><th>المهمة الأساسية</th></tr>
+    <tr><td><strong>1. الاندماج</strong></td><td>0–3 أشهر</td><td>دوبامين مرتفع، سيروتونين منخفض، لوزة هادئة تجاه الشريك</td><td>الاقتراب، بناء الثقة الأولى</td></tr>
+    <tr><td><strong>2. التثبيت</strong></td><td>3–12 شهرًا</td><td>تثبيت الذاكرة العاطفية، أوكسيتوسين صاعد</td><td>اختبار الواقع: هل هذا الشخص مناسب يوميًا؟</td></tr>
+    <tr><td><strong>3. الفجوة</strong></td><td>1–2 سنة</td><td>هبوط الشغف، المخطط يعتاد، القشرة الجبهية تعود للعمل</td><td>الانتقال من الشغف إلى الرفقة — أو الانفصال</td></tr>
+    <tr><td><strong>4. الرفقة</strong></td><td>2–5 سنوات</td><td>أوكسيتوسين + إندورفين، استقرار الكورتيزول</td><td>بناء الحياة المشتركة والمعنى</td></tr>
+    <tr><td><strong>5. النضج</strong></td><td>5+ سنوات</td><td>دمج: دفء عميق + شغف متجدد (عند العمل عليه)</td><td>النمو المشترك، الأبوة، الإرث</td></tr>
+  </table>
+
+  <div class="key"><b>القاعدة الذهبية</b>لا تتزوج في المرحلة 1 (لن ترى بوضوح)، ولا تهرب في المرحلة 3 (لن ترى ما بعدها). القرار الحكيم يُتخذ في نهاية 2 وبداية 3.</div>
+</section>
+
+<!-- ================= 10 ================= -->
+<section class="page" id="s10">
+  <div class="page-head">
+    <div class="icon-badge"><span class="num">10</span>
+      <svg viewBox="0 0 24 24"><path d="M12 3v18M5 8l7-5 7 5"/><path d="M5 16l7 5 7-5"/></svg>
+    </div>
+    <div>
+      <h2 class="page-title"><small>المرحلة الأولى</small>الشهر 0–3: الاندماج والهلع</h2>
+      <p class="page-desc">أجمل مرحلة وأكثرها خداعًا. الدماغ يبني «نحن» قبل أن يعرف «من».</p>
+    </div>
+  </div>
+
+  <p class="lead">في هذه المرحلة يعمل دماغك بمنطق مختلف: <strong>الفردوس المفقود</strong>. ترى أفضل ما في الطرف الآخر، وتُسقط عليه صورة مثالية صنعتها أنت — وهذا ليس كذبًا، بل وظيفة عصبية.</p>
+
+  <h3>ثلاث عمليات تحدث الآن</h3>
+  <div class="grid3">
+    <div class="card rose"><span class="tag">1</span><h4>المثالية الإسقاطية</h4><p>القشرة الجبهية تخفّض نقدها، واللوزة تهدأ تجاه الشريك، فيقلّ الحكم السلبي. ترى الإمكانات، لا الواقع.</p></div>
+    <div class="card gold"><span class="tag">2</span><h4>الدمج الهوياتي</h4><p>يبدأ الدماغ بضمّ الآخر إلى «الأنا»: أذواقه تصبح أذواقك، وأصدقاؤه أصدقاءك. هذا هو أساس كلمة «نحن».</p></div>
+    <div class="card"><span class="tag">3</span><h4>قلق الانفصال</h4><p>عند الغياب، يرتفع الكورتيزول ويظهر شوق جسدي حقيقي — وهو نفس نظام التعلّق عند الأطفال.</p></div>
+  </div>
+
+  <h3>ما يحدث للدماغ حرفيًا</h3>
+  <p>دراسة <strong>بارتلز وزيكي (2000)</strong> على أشخاص ينظرون لصور شركائهم وجدت:</p>
+  <ul class="clean">
+    <li><strong>تنشيط</strong> في VTA والمخطط (دائرة المكافأة) — مصدر اللهفة.</li>
+    <li><strong>تعطيل</strong> في اللوزة والقشرة الحزامية الخلفية وبعض مناطق القشرة الجبهية — أي <em>تعطيل</em> مناطق الحكم النقدي والرصد الاجتماعي.</li>
+  </ul>
+  <p>هذا التعطيل هو التفسير العصبي لجملة «الحب أعمى». ليس عمًى حرفيًا، بل <strong>خفض مؤقت في وظيفة الناقد الداخلي</strong>.</p>
+
+  <div class="warn key"><b>خطر هذه المرحلة</b>لأن الناقد معطّل، فإن الأعلام الحمراء تُرى ولا تُسجَّل. من المهم أن يكون لديك <strong>شخص ثالث موثوق</strong> (صديق عاقل) يسألك: «ما الذي تلاحظه ولا تريد أن تراه؟» — لا ليقرر عنك، بل ليعيد تشغيل قشرتك الجبهية.</div>
+
+  <div class="key"><b>تمرين للطرفين</b>اكتبا معًا — كل واحد على حدة — ثلاث أشياء تعجبكما، وثلاث أشياء تريدان معرفتها، وثلاثة حدود لا تتنازلون عنها. ثم قارنا. هذه ليست «رومانسية»، لكنها تُنشئ توقعات واقعية تحمي العلاقة لاحقًا من الانهيار.</div>
+</section>
+
+<!-- ================= 11 ================= -->
+<section class="page" id="s11">
+  <div class="page-head">
+    <div class="icon-badge"><span class="num">11</span>
+      <svg viewBox="0 0 24 24"><path d="M4 19V5a2 2 0 0 1 2-2h9l5 5v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M8 9h5M8 13h7M8 17h4"/></svg>
+    </div>
+    <div>
+      <h2 class="page-title"><small>المرحلة الثانية</small>الشهر 3–12: التثبيت</h2>
+      <p class="page-desc">تبدأ الذاكرة بتحويل «الشخص» إلى «جزء مني». وهنا يظهر أول خلاف حقيقي.</p>
+    </div>
+  </div>
+
+  <p class="lead">بعد الأشهر الثلاثة الأولى، تتوقف الكيمياء عن كونها «فيضانًا» وتصبح <strong>نمطًا</strong>. هذا جيد للبقاء، وسيئ للوهم: تبدأ ترى الشخص كما هو.</p>
+
+  <h3>ماذا يتغيّر عصبيًا؟</h3>
+  <ul class="clean">
+    <li><strong>تثبيت الذاكرة (Consolidation):</strong> الحُصين ينقل الذكريات العاطفية إلى القشرة المخية للاحتفاظ طويل الأمد. لهذا تبقى تفاصيل اللقاء الأول حيّة لعشرين سنة.</li>
+    <li><strong>بناء التوقعات:</strong> المخطط يبدأ بتوقّع سلوك الطرف الآخر. كل توقع يُصيب يُقوّي الثقة، وكل توقع يُخيب يُنشئ «جرحًا صغيرًا».</li>
+    <li><strong>عودة القشرة الجبهية:</strong> تعود القدرة على النقد والتحليل — وهنا تظهر الخلافات الأولى.</li>
+  </ul>
+
+  <h4>الخلاف الأول: فرصة لا كارثة</h4>
+  <p>الخلاف في هذه المرحلة ليس دليلًا على عدم التوافق، بل هو <strong>اختبار إصلاح</strong>. الأبحاث على العلاقات تُظهر أن ما يتنبأ بالنجاح ليس غياب الخلاف، بل قدرة الطرفين على <em>الترميم بعد الخلاف</em>.</p>
+
+  <figure>
+    <svg viewBox="0 0 820 260" role="img" aria-label="دورة الخلاف والإصلاح">
+      <text class="svg-title" x="410" y="26" text-anchor="middle">الخلاف الصحي مقابل الخلاف المُدمّر</text>
+      <!-- صحي -->
+      <g>
+        <text class="svg-label" x="200" y="62" text-anchor="middle" fill="#2ee6c5">دورة الإصلاح</text>
+        <rect x="60" y="80" width="90" height="46" rx="10" fill="rgba(46,230,197,.1)" stroke="#2ee6c5" stroke-opacity=".5"/>
+        <text class="svg-small" x="105" y="108" text-anchor="middle">توتر</text>
+        <rect x="175" y="80" width="90" height="46" rx="10" fill="rgba(46,230,197,.1)" stroke="#2ee6c5" stroke-opacity=".5"/>
+        <text class="svg-small" x="220" y="108" text-anchor="middle">تعبير</text>
+        <rect x="290" y="80" width="90" height="46" rx="10" fill="rgba(46,230,197,.1)" stroke="#2ee6c5" stroke-opacity=".5"/>
+        <text class="svg-small" x="335" y="108" text-anchor="middle">استماع</text>
+        <rect x="175" y="160" width="205" height="46" rx="10" fill="rgba(245,196,81,.1)" stroke="#f5c451" stroke-opacity=".5"/>
+        <text class="svg-small" x="277" y="188" text-anchor="middle" fill="#f5c451">إصلاح + اتفاق جديد</text>
+        <path d="M150 103 L171 103M265 103 L286 103" stroke="#2ee6c5" stroke-width="2"/>
+        <path d="M335 126 L335 156" stroke="#f5c451" stroke-width="2"/>
+        <path d="M175 183 L150 183 L150 130" stroke="#f5c451" stroke-width="2" stroke-dasharray="4 4"/>
+      </g>
+      <!-- مدمّر -->
+      <g>
+        <text class="svg-label" x="620" y="62" text-anchor="middle" fill="#ff6b8b">دورة التصعيد</text>
+        <rect x="470" y="80" width="90" height="46" rx="10" fill="rgba(255,107,139,.1)" stroke="#ff6b8b" stroke-opacity=".5"/>
+        <text class="svg-small" x="515" y="108" text-anchor="middle">نقد</text>
+        <rect x="585" y="80" width="90" height="46" rx="10" fill="rgba(255,107,139,.1)" stroke="#ff6b8b" stroke-opacity=".5"/>
+        <text class="svg-small" x="630" y="108" text-anchor="middle">دفاع</text>
+        <rect x="700" y="80" width="90" height="46" rx="10" fill="rgba(255,107,139,.1)" stroke="#ff6b8b" stroke-opacity=".5"/>
+        <text class="svg-small" x="745" y="108" text-anchor="middle">انسحاب</text>
+        <path d="M560 103 L581 103M675 103 L696 103" stroke="#ff6b8b" stroke-width="2"/>
+        <path d="M745 126 C745 175 640 185 515 175 C430 168 450 140 470 128" stroke="#ff6b8b" stroke-width="2" fill="none" stroke-dasharray="5 4"/>
+        <text class="svg-small" x="610" y="215" text-anchor="middle">لا إصلاح → تآكل الثقة</text>
+      </g>
+    </svg>
+    <figcaption><b>مخطط 7:</b> نفس المحتوى، مسارين مختلفين. الفرق ليس في الموضوع، بل في وجود خطوة «إصلاح».</figcaption>
+  </figure>
+
+  <div class="key"><b>قاعدة الإصلاح</b>بعد أي خلاف، لا تنهِ الحديث قبل تنفيذ ثلاث خطوات: <strong>اعتراف</strong> («فهمت أنك جرحت»)، <strong>مسؤولية</strong> («أنا أسهمت بكذا»)، <strong>خطة</strong> («في المرة القادمة سنفعل كذا»). الدماغ يحتاج إغلاق الدائرة، لا مجرد توقف الصراخ.</div>
+</section>
+
+<!-- ================= 12 ================= -->
+<section class="page" id="s12">
+  <div class="page-head">
+    <div class="icon-badge"><span class="num">12</span>
+      <svg viewBox="0 0 24 24"><path d="M3 17l5-6 4 3 4-7 5 5"/><path d="M3 21h18"/></svg>
+    </div>
+    <div>
+      <h2 class="page-title"><small>المرحلة الثالثة</small>السنة 1–3: الانطفاء التدريجي</h2>
+      <p class="page-desc">أخطر منعطف في العلاقة، وأكثر ما يُساء فهمه: الفجوة بين الشغف والتعلّق.</p>
+    </div>
+  </div>
+
+  <p class="lead">في هذه المرحلة يقول أحد الطرفين جملة قاتلة: «أشعر أن شيئًا تغيّر». صحيح: <strong>تغيّر الدماغ</strong>. ليس لأنه توقف عن الحب، بل لأنه انتقل إلى نظام آخر.</p>
+
+  <h3>ثلاث آليات للانطفاء</h3>
+  <div class="grid3">
+    <div class="card rose"><span class="tag">آلية 1</span><h4>التعوّد (Habituation)</h4><p>المخطط يتوقف عن الاستجابة للمنبّه المتكرر. نفس الوجه، نفس النبرة، نفس الروتين → استجابة دوبامينية أضعف.</p></div>
+    <div class="card gold"><span class="tag">آلية 2</span><h4>عودة الناقد</h4><p>القشرة الجبهية تعمل بكامل طاقتها، فتبدأ برؤية العيوب التي لم تكن تراها. هذا ليس «تراجعًا»، بل <em>وضوح</em>.</p></div>
+    <div class="card violet"><span class="tag">آلية 3</span><h4>تحوّل الهوية</h4><p>ينتهي الدمج المثالي، ويبدأ صراع «أنا / نحن»: كم أتنازل؟ كم أحتفظ بنفسي؟</p></div>
+  </div>
+
+  <h3>ما لا يقوله لك أحد</h3>
+  <p>هبوط الشغف في السنة الأولى أو الثانية <strong>ليس مؤشرًا على اختيار خاطئ</strong>. الدراسات تُظهر أن الشغف الحادّ يهبط في معظم العلاقات خلال 12–24 شهرًا، بغض النظر عن مدى التوافق. من يفسّر هذا الهبوط بأنه «نهاية الحب» يترك علاقة جيدة، ثم يبدأ علاقة جديدة، ثم يصل لنفس النقطة بعد عامين — وهكذا في حلقة.</p>
+
+  <div class="warn key"><b>فخ «الحب المتجدد»</b>إذا كانت كل علاقاتك تنتهي عند الشهر 18 تقريبًا، فالمشكلة ليست في الأشخاص. أنت تدمن <strong>مرحلة الشغف</strong>، لا الحب. المرحلة الأولى سهلة؛ البناء هو المهارة.</div>
+
+  <h3>ماذا تفعل في هذه المرحلة؟</h3>
+  <ol class="steps">
+    <li><strong>أعد تسمية ما يحدث:</strong> من «انتهى الحب» إلى «انتقل النظام». التسمية تغيّر الاستجابة العصبية.</li>
+    <li><strong>اصنع تجارب جديدة مشتركة:</strong> نموذج «التوسّع الذاتي» (Aron) يقول إن التجارب الجديدة تُعيد إطلاق الشغف لأنها تُعيد الدماغ إلى حالة التعلّم.</li>
+    <li><strong>ارفع كثافة اللمس والانتباه:</strong> أوكسيتوسين لا يُبنى بالكلام.</li>
+    <li><strong>تحدّث عن المستقبل:</strong> الأهداف المشتركة تُنشّط دوائر المكافأة الأمامية، وتُعطي العلاقة «مشروعًا».</li>
+  </ol>
+
+  <div class="key"><b>سؤال تشخيصي</b>اسأل نفسك: «لو حدث شيء سيئ لهذا الشخص الآن، هل سأركض إليه؟» إذا كانت الإجابة نعم — فالحب موجود، والشغف فقط هو ما انخفض. وإذا كانت الإجابة «لا أعرف» — فقد تحتاج إلى عمل Conscious، لا إلى قرار متسرّع.</div>
+</section>
+
+<!-- ================= 13 ================= -->
+<section class="page" id="s13">
+  <div class="page-head">
+    <div class="icon-badge"><span class="num">13</span>
+      <svg viewBox="0 0 24 24"><path d="M12 21C7 17 3 14 3 9.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 9 2.5C21 14 17 17 12 21Z"/></svg>
+    </div>
+    <div>
+      <h2 class="page-title"><small>المرحلة الرابعة</small>الحب طويل الأمد</h2>
+      <p class="page-desc">هل يمكن أن يدوم الشغف عشرين سنة؟ الجواب العلمي: نعم — لكن ليس تلقائيًا.</p>
+    </div>
+  </div>
+
+  <p class="lead">دراسة <strong>أسيفيدو وزملائها (2012)</strong> صوّرت أدمغة أشخاص متزوجين منذ 10 سنوات أو أكثر، ووصفوا حبهم بأنه «شديد». النتيجة: تنشيط في <strong>المخطط (caudate)</strong> و<strong>VTA</strong> — نفس مناطق الشغف — لكن مع نشاط أعلى في مناطق الترابط والهدوء.</p>
+
+  <p>الاستنتاج: <strong>الحب الشديد طويل الأمد ليس خيالًا</strong>، لكنه يحدث لدى أقلية، ويرتبط بسلوكيات محددة: ممارسة الجنس بانتظام، مبادرة مشتركة، وإدخال تجارب جديدة باستمرار.</p>
+
+  <figure>
+    <svg viewBox="0 0 820 300" role="img" aria-label="الحب طويل الأمد بين الشغف والرفقة">
+      <ellipse cx="300" cy="150" rx="190" ry="110" fill="rgba(255,107,139,.1)" stroke="#ff6b8b" stroke-opacity=".5"/>
+      <text class="svg-label" x="300" y="80" text-anchor="middle" fill="#ff9db1">الشغف (Passion)</text>
+      <ellipse cx="520" cy="150" rx="190" ry="110" fill="rgba(46,230,197,.1)" stroke="#2ee6c5" stroke-opacity=".5"/>
+      <text class="svg-label" x="520" y="80" text-anchor="middle" fill="#2ee6c5">الرفقة (Companionship)</text>
+      <ellipse cx="410" cy="175" rx="90" ry="55" fill="rgba(245,196,81,.25)" stroke="#f5c451"/>
+      <text class="svg-label" x="410" y="172" text-anchor="middle" fill="#f5c451">الحب</text>
+      <text class="svg-label" x="410" y="192" text-anchor="middle" fill="#f5c451">الناضج</text>
+      <text class="svg-small" x="410" y="285" text-anchor="middle">الهدف ليس اختيار أحدهما، بل بناء التقاطع بينهما</text>
+    </svg>
+    <figcaption><b>مخطط 8:</b> الحب الناضج ليس «نهاية» الشغف، بل تقاطعه مع الأمان.</figcaption>
+  </figure>
+
+  <h3>خمس ممارسات تُثبتها الأبحاث</h3>
+  <table>
+    <tr><th>الممارسة</th><th>الأثر العصبي</th></tr>
+    <tr><td>تجارب جديدة مشتركة (سفر، مهارة، تحدٍّ)</td><td>إعادة إطلاق دوبامين عبر «خطأ التوقع» الإيجابي</td></tr>
+    <tr><td>لمس جسدي يومي متكرر</td><td>أوكسيتوسين + خفض الكورتيزول</td></tr>
+    <tr><td>الامتنان المعلن</td><td>تنشيط القشرة الجبهية الوسطى، تعزيز المشاعر الإيجابية</td></tr>
+    <tr><td>الاهتمام بالتفاصيل الصغيرة («رأيت أنك متعب»)</td><td>دائرة المكافأة الاجتماعية + إشارة أمان للوزة</td></tr>
+    <tr><td>الفضول المستمر تجاه الداخل</td><td>منع «التعوّد» عبر إبقاء الشريك غير مكتمل المعرفة</td></tr>
+  </table>
+
+  <div class="key"><b>سرّ بسيط</b>الأزواج الذين يدوم شغفهم لا يعيشون حياة خالية من الروتين — بل يبنون <strong>روتينًا فيه مفاجأة</strong>. الفرق بين علاقة ميتة وحيّة ليس في الحب، بل في عدد التجارب الجديدة في الشهر.</div>
+</section>
+
+<!-- ================= 14 ================= -->
+<section class="page" id="s14">
+  <div class="page-head">
+    <div class="icon-badge"><span class="num">14</span>
+      <svg viewBox="0 0 24 24"><path d="M6 3v6a3 3 0 0 0 3 3h6a3 3 0 0 1 3 3v6"/><path d="M18 3v3M3 18h3"/></svg>
+    </div>
+    <div>
+      <h2 class="page-title"><small>النموذج الإدماني</small>الحب كإدمان</h2>
+      <p class="page-desc">لماذا لا تستطيع «تجاوزه»؟ لأن دماغك يعامله كإدمان — بنفس الدوائر، ونفس الانسحاب.</p>
+    </div>
+  </div>
+
+  <p class="lead">هذا القسم قد يكون الأهم في الدليل كله. إذا فهمت أن الحب الشديد يشبه الإدمان عصبيًا، فسيتغيّر حكمك على نفسك: <strong>لست ضعيفًا، أنت في حالة انسحاب كيميائي</strong>.</p>
+
+  <h3>أوجه الشبه الأربعة</h3>
+  <table>
+    <tr><th>السمة</th><th>في الإدمان</th><th>في الحب</th></tr>
+    <tr><td>الدائرة</td><td>VTA → النواة المتكئة</td><td>نفسها تمامًا</td></tr>
+    <tr><td>التسامح (Tolerance)</td><td>تحتاج جرعة أكبر لنفس الأثر</td><td>تحتاج «مزيدًا من الشخص» لنفس اللهفة</td></tr>
+    <tr><td>الانسحاب (Withdrawal)</td><td>قلق، أرق، ألم جسدي</td><td>شوق، بكاء، فقدان شهية، اضطراب نوم</td></tr>
+    <tr><td>الانتكاس (Relapse)</td><td>مُنبّه واحد يعيد الدورة</td><td>رسالة واحدة، أغنية، مكان مشترك</td></tr>
+  </table>
+
+  <h3>دراسة الرفض: ماذا يحدث في دماغ المرفوض؟</h3>
+  <p><strong>فيشر، براون، وأرون (2010)</strong> صوّروا أدمغة أشخاص تعرّضوا لرفض عاطفي حديثًا. عند رؤية صورة الطرف الرافض:</p>
+  <ul class="clean">
+    <li>تنشيط قوي في <strong>النواة المتكئة وVTA</strong> — أي دائرة المكافأة تريد بشدة.</li>
+    <li>تنشيط في <strong>القشرة الحجاجية الجبهية (OFC)</strong> — المنطقة التي تُقيّم «قيمة» الشيء المفقود.</li>
+    <li>تنشيط في <strong>الجزيرة والقشرة الحزامية الأمامية</strong> — أي الألم الجسدي والعاطفي.</li>
+  </ul>
+  <p>أي أن دماغك في حالة الرفض: <em>يريد بشدة + يشعر بألم شديد + يقيس قيمة الشخص باستمرار</em>. هذه ليست «مشاعر مبالغ فيها»، هذا نظام إدمان كامل.</p>
+
+  <figure>
+    <svg viewBox="0 0 820 320" role="img" aria-label="منحنى الانسحاب العاطفي">
+      <line x1="60" y1="260" x2="790" y2="260" stroke="#93a4c4" stroke-opacity=".35"/>
+      <line x1="60" y1="260" x2="60" y2="40" stroke="#93a4c4" stroke-opacity=".35"/>
+      <path d="M60 240 C90 250 110 120 150 110 C190 100 210 150 250 190 C300 240 360 215 430 215 C520 215 610 200 700 185 C740 178 770 172 790 168"
+            stroke="#ff6b8b" stroke-width="4" fill="none"/>
+      <path d="M60 240 C90 250 130 230 180 235 C260 244 330 240 420 235 C520 229 640 222 790 215" stroke="#2ee6c5" stroke-width="3" fill="none" stroke-dasharray="6 4"/>
+      <text class="svg-label" x="150" y="88" text-anchor="middle" fill="#ff9db1">ذروة الألم</text>
+      <text class="svg-small" x="150" y="68" text-anchor="middle">أسبوع 1–4</text>
+      <text class="svg-label" x="420" y="195" text-anchor="middle" fill="#f5c451">الموج</text>
+      <text class="svg-small" x="420" y="255" text-anchor="middle">الشهر 1–3</text>
+      <text class="svg-label" x="680" y="150" text-anchor="middle" fill="#2ee6c5">الاستقرار التدريجي</text>
+      <text class="svg-small" x="680" y="255" text-anchor="middle">6–24 شهرًا</text>
+      <text class="svg-small" x="70" y="50" fill="#93a4c4">شدة</text>
+    </svg>
+    <figcaption><b>مخطط 9:</b> الشفاء ليس خطًا مستقيمًا (المتقطّع)، بل موجات (الصلب). كل موجة أضعف من سابقتها — إن لم تُغذَّ بمُنبّه جديد.</figcaption>
+  </figure>
+
+  <div class="warn key"><b>ماذا يعني هذا عمليًا؟</b>علاج الانسحاب العاطفي يشبه علاج الإدمان: <strong>منع المُنبّهات</strong> (لا صور، لا حسابات، لا «صداقة» متابعة)، <strong>إعادة بناء الروتين</strong>، <strong>دعم اجتماعي</strong>، و<strong>تفريغ جسدي</strong> (رياضة تُفرز إندورفين وتُنظّم الدوبامين). الإرادة وحدها تفشل؛ إدارة البيئة تنجح.</div>
+</section>
+
+<!-- ================= 15 ================= -->
+<section class="page" id="s15">
+  <div class="page-head">
+    <div class="icon-badge"><span class="num">15</span>
+      <svg viewBox="0 0 24 24"><path d="M12 3v14"/><path d="M7 12l5 5 5-5"/><path d="M4 21h16"/></svg>
+    </div>
+    <div>
+      <h2 class="page-title"><small>النهاية الأولى</small>تشريح الانفصال</h2>
+      <p class="page-desc">أربع مراحل يمرّ بها كل مرفوض. معرفتها تحوّل الألم من «عذاب» إلى «مسار».</p>
+    </div>
+  </div>
+
+  <p class="lead">الانفصال ليس حدثًا واحدًا، بل <strong>عملية عصبية</strong> لها بداية وذروة ونهاية. فيشر وزملاؤها وصفوا مرحلتين كبيرتين: <em>الاحتجاج</em> ثم <em>الاستسلام</em> — وبينهما يعيش الدماغ صراعًا بين نظام المكافأة ونظام الألم.</p>
+
+  <figure>
+    <svg viewBox="0 0 840 380" role="img" aria-label="مراحل الانفصال النفسية">
+      <line x1="10" y1="200" x2="830" y2="200" stroke="#93a4c4" stroke-opacity=".25" stroke-dasharray="4 6"/>
+
+      <!-- المراحل -->
+      <g>
+        <rect x="30" y="60" width="160" height="90" rx="14" fill="rgba(255,107,139,.12)" stroke="#ff6b8b" stroke-opacity=".55"/>
+        <text class="svg-label" x="110" y="90" text-anchor="middle" fill="#ff9db1">1. الصدمة</text>
+        <text class="svg-small" x="110" y="112" text-anchor="middle">إنكار · خدر · «لم يحدث»</text>
+        <text class="svg-small" x="110" y="132" text-anchor="middle">ساعات → أيام</text>
+
+        <rect x="230" y="30" width="170" height="120" rx="14" fill="rgba(255,107,139,.18)" stroke="#ff6b8b" stroke-opacity=".7"/>
+        <text class="svg-label" x="315" y="64" text-anchor="middle" fill="#ff9db1">2. الاحتجاج</text>
+        <text class="svg-small" x="315" y="88" text-anchor="middle">مطاردة · إلحاح · مساومة</text>
+        <text class="svg-small" x="315" y="108" text-anchor="middle">«سأغيّر نفسي»</text>
+        <text class="svg-small" x="315" y="128" text-anchor="middle">أسبوع → شهر</text>
+
+        <rect x="440" y="130" width="170" height="130" rx="14" fill="rgba(139,123,255,.12)" stroke="#8b7bff" stroke-opacity=".6"/>
+        <text class="svg-label" x="525" y="164" text-anchor="middle" fill="#b9aeff">3. الانكسار</text>
+        <text class="svg-small" x="525" y="188" text-anchor="middle">حزن عميق · أرق · فقدان معنى</text>
+        <text class="svg-small" x="525" y="208" text-anchor="middle">ذروة الكورتيزول</text>
+        <text class="svg-small" x="525" y="228" text-anchor="middle">شهر → 3 أشهر</text>
+
+        <rect x="650" y="235" width="160" height="100" rx="14" fill="rgba(46,230,197,.1)" stroke="#2ee6c5" stroke-opacity=".55"/>
+        <text class="svg-label" x="730" y="265" text-anchor="middle" fill="#2ee6c5">4. الاستسلام</text>
+        <text class="svg-small" x="730" y="288" text-anchor="middle">قبول · إعادة بناء الهوية</text>
+        <text class="svg-small" x="730" y="310" text-anchor="middle">6 أشهر → سنتين</text>
+      </g>
+
+      <path d="M190 105 L226 95" stroke="#ff6b8b" stroke-width="2" marker-end="url(#ar2)"/>
+      <path d="M400 150 L436 165" stroke="#8b7bff" stroke-width="2"/>
+      <path d="M610 200 L646 240" stroke="#2ee6c5" stroke-width="2"/>
+      <defs><marker id="ar2" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6Z" fill="#ff6b8b"/></marker></defs>
+    </svg>
+    <figcaption><b>مخطط 10:</b> المرحلة 2 هي الأكثر خطورة سلوكيًا — الدماغ يبحث عن «جرعة» من الشخص المفقود بأي ثمن.</figcaption>
+  </figure>
+
+  <h3>لماذا نُرسل رسائل لا يجب إرسالها؟</h3>
+  <p>سلوك الاحتجاج (Protest Behavior) ليس ضعفًا في الشخصية. إنه <strong>محاولة نظام التعلّق</strong> لاستعادة القرب — تمامًا كما يبكي طفل حين يغيب أمه. فيشر تسميه «الاحتجاج»، وهو يشمل: الاتصال المتكرر، مراقبة الحسابات، التهديد، والتوسّل.</p>
+
+  <div class="key"><b>قاعدة عملية</b>كلما زادت شدة الاحتجاج، زاد <strong>فقدان الكرامة</strong> و<strong>تقوية الذاكرة السلبية</strong> عند الطرف الآخر. أفضل شيء تفعله في المرحلة 2 ليس «إقناعه»، بل <strong>تثبيت الحدّ</strong>: «أنا أحترم قرارك، وأحتاج مسافة لأتعافى».</div>
+
+  <div class="warn key"><b>متى تحتاج مساعدة متخصصة؟</b>إذا استمر الألم الشديد أكثر من 6 أشهر مع اضطراب وظيفي (عمل، نوم، أكل)، أو ظهرت أفكار إيذاء نفس — فهذا ليس «حبًا قويًا»، بل حالة تحتاج تدخلًا نفسيًا. طلب المساعدة سلوك عصبي ذكي، لا علامة ضعف.</div>
+</section>
+
+<!-- ================= 16 ================= -->
+<section class="page" id="s16">
+  <div class="page-head">
+    <div class="icon-badge"><span class="num">16</span>
+      <svg viewBox="0 0 24 24"><path d="M4 4h10l6 6v10H4Z"/><path d="M14 4v6h6"/><path d="M8 14h8M8 18h5"/></svg>
+    </div>
+    <div>
+      <h2 class="page-title"><small>الذاكرة</small>لماذا لا ينسى الدماغ؟</h2>
+      <p class="page-desc">الذكريات العاطفية لا تُخزَّن كملفات — بل تُعاد بناؤها في كل مرة تتذكرها.</p>
+    </div>
+  </div>
+
+  <p class="lead">«لماذا ما زلت أتذكرها بعد ثلاث سنوات؟» — لأن الذاكرة العاطفية تُخزَّن في <strong>الحُصين واللوزة معًا</strong>، واللوزة تعطيها «وسمًا» يجعلها تُستدعى عند أدنى إشارة.</p>
+
+  <h3>ثلاث خصائص تفسّر كل شيء</h3>
+  <div class="grid3">
+    <div class="card rose"><span class="tag">1</span><h4>الوسم العاطفي</h4><p>كل ذكرى مصحوبة بانفعال تُخزَّن أقوى. لهذا تتذكر أول لقاء بتفاصيله، وتنسى محاضرة كاملة.</p></div>
+    <div class="card gold"><span class="tag">2</span><h4>الاستدعاء الشرطي</h4><p>أغنية، عطر، شارع، نبرة صوت — تصبح «مُنبّهًا شرطيًا» يُطلق الاستجابة العاطفية كاملة.</p></div>
+    <div class="card violet"><span class="tag">3</span><h4>إعادة التسجيل</h4><p>عند كل استدعاء، تُعاد كتابة الذكرى قليلًا. لهذا تتغيّر تفاصيلها وتزداد أحيانًا مبالغة.</p></div>
+  </div>
+
+  <h3>الحُصين والزمن</h3>
+  <p>الحُصين هو «خازن السياق»: يخبرك أن هذا الحدث <em>ماضٍ</em>. في الحب الجديد، يعمل الحُصين بقوة لتسجيل التفاصيل. بعد الانفصال، يحتاج الحُصين إلى وقت ليُعيد تصنيف الذكريات من «حاضر مؤلم» إلى «ماضٍ محفوظ». هذه العملية تسمى <strong>إعادة التثبيت (Reconsolidation)</strong>.</p>
+
+  <div class="key"><b>كيف تُسرّع الشفاء؟</b>لا تحاول محو الذكرى — بل <strong>تغيير وسمها</strong>. عند استدعاء ذكرى مؤلمة، أضف معلومة جديدة: «هذا كان جميلًا، وانتهى، وأنا بخير الآن». التكرار الواعي يُعيد كتابة الوسم العاطفي. هذا هو أساس كثير من العلاجات المعرفية.</div>
+
+  <div class="warn key"><b>ما لا يجب فعله</b>محاولة «النسيان» تُنتج أثرًا معاكسًا (كبح الفكر). كلما قلتَ «لا أفكر فيه»، زاد نشاط الشبكة الافتراضية التي تُعيد إنتاج الفكرة. البديل: <strong>إحلال</strong> — استبدال النشاط بآخر، لا مقاومته.</div>
+</section>
+
+<!-- ================= 17 ================= -->
+<section class="page" id="s17">
+  <div class="page-head">
+    <div class="icon-badge"><span class="num">17</span>
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg>
+    </div>
+    <div>
+      <h2 class="page-title"><small>تصنيف النهايات</small>خمسة أنواع من نهايات الحب</h2>
+      <p class="page-desc">كل نهاية لها كيمياء مختلفة، وأثر مختلف، وطريق مختلف للتعافي.</p>
+    </div>
+  </div>
+
+  <p class="lead">«انتهى الحب» جملة واحدة، لكنها تصف خمس تجارب مختلفة تمامًا. الخلط بينها يجعل الناس يُعالجون الألم الخطأ بالطريقة الخطأ.</p>
+
+  <div class="grid2">
+    <div class="card rose">
+      <span class="tag">النوع 1</span><h4>الفتور التدريجي (Drift)</h4>
+      <p>لا حدث كبير. فقط مسافة تزيد، ورسائل تقلّ، وحياة تتفرّع. ينتهي بجملة: «صرنا أصدقاء».</p>
+      <p><em>الأثر:</em> حزن باهت + شعور بالذنب. <em>التعافي:</em> حزن صامت طويل، لكنه الأسهل غالبًا.</p>
+    </div>
+    <div class="card violet">
+      <span class="tag">النوع 2</span><h4>الانفصال الناضج (Conscious)</h4>
+      <p>قرار مشترك مبني على حوار. الطرفان يعترفان بأن العلاقة لم تعد تُناسب، دون وصم.</p>
+      <p><em>الأثر:</em> حزن نقي بلا غضب. <em>التعافي:</em> أسرع وأصح — لأنه لا يوجد «جرح ظلم» يُغذّي الألم.</p>
+    </div>
+    <div class="card rose">
+      <span class="tag">النوع 3</span><h4>الخيانة أو الصدمة</h4>
+      <p>كسر الثقة بشكل مفاجئ. الدماغ يعيشها كصدمة: تفكّك في السرد، فرط استنفار، اجترار.</p>
+      <p><em>الأثر:</em> أقوى أنواع الألم — لأنها تجمع الرفض + الخداع + فقدان المعنى.</p>
+    </div>
+    <div class="card gold">
+      <span class="tag">النوع 4</span><h4>الفقد (الموت أو الغياب)</h4>
+      <p>العلاقة لم تنتهِ بالرفض، بل بالغياب. الدماغ يواصل البحث عن الشخص لأنه لم يتلقَّ إشارة إغلاق.</p>
+      <p><em>الأثر:</em> حزن وجودي. <em>الفرق:</em> لا يوجد «غضب رفض»، بل شوق نقي.</p>
+    </div>
+    <div class="card gold">
+      <span class="tag">النوع 5</span><h4>النهاية المعلّقة (On–Off)</h4>
+      <p>«نحن لسنا معًا… لكن لسنا منفصلين». لا إغلاق، ولا استمرار. أخطر الأنواع عصبيًا.</p>
+      <p><em>الأثر:</em> إدمان صافٍ: تعزيز متقطع بلا استقرار. يمنع الشفاء تمامًا.</p>
+    </div>
+  </div>
+
+  <h3>مقارنة سريعة</h3>
+  <table>
+    <tr><th>النوع</th><th>المشاعر السائدة</th><th>مدة التعافي النموذجية</th><th>الخطر الأساسي</th></tr>
+    <tr><td>الفتور</td><td>حزن باهت، ذنب</td><td>3–9 أشهر</td><td>البقاء طويلًا في علاقة ميتة</td></tr>
+    <tr><td>الناضج</td><td>حزن، امتنان</td><td>3–12 شهرًا</td><td>الندم لاحقًا دون سبب</td></tr>
+    <tr><td>الخيانة</td><td>غضب، صدمة، شك</td><td>12–24 شهرًا</td><td>تعميم الخيانة على كل شريك قادم</td></tr>
+    <tr><td>الفقد</td><td>شوق، معنى مكسور</td><td>سنة → سنوات</td><td>الجمود في الحزن</td></tr>
+    <tr><td>المعلّقة</td><td>أمل، قلق، هوس</td><td>غير محددة</td><td>استنزاف سنوات بلا قرار</td></tr>
+  </table>
+
+  <div class="key"><b>سؤال حاسم</b>«أي نوع من النهايات أنا فيه؟» — الجواب يحدد الخطة. النهاية المعلّقة تحتاج <strong>قرارًا</strong>، لا صبرًا. والخيانة تحتاج <strong>إعادة بناء ثقة بالذات</strong>، لا نسج الشريك السابق.</div>
+</section>
+
+<!-- ================= 18 ================= -->
+<section class="page" id="s18">
+  <div class="page-head">
+    <div class="icon-badge"><span class="num">18</span>
+      <svg viewBox="0 0 24 24"><path d="M12 21V9"/><path d="M12 9c0-4 3-6 7-6 0 4-3 6-7 6Z"/><path d="M12 13c0-3-3-5-7-5 0 4 3 6 7 5Z"/></svg>
+    </div>
+    <div>
+      <h2 class="page-title"><small>ما بعد الألم</small>الحزن المعقد والنمو</h2>
+      <p class="page-desc">ليس كل حزن مرضًا، وليس كل شفاء عودةً إلى ما قبل. بعض الناس يخرجون أعمق.</p>
+    </div>
+  </div>
+
+  <h3>الحزن الطبيعي مقابل الحزن المعقد</h3>
+  <table>
+    <tr><th>المؤشر</th><th>حزن طبيعي</th><th>حزن معقّد (يحتاج تدخلًا)</th></tr>
+    <tr><td>المدة</td><td>يتذبذب، يخفّ تدريجيًا</td><td>شديد ومستمر بعد 12 شهرًا</td></tr>
+    <tr><td>الوظيفة</td><td>يعود للعمل والعلاقات تدريجيًا</td><td>تعطّل مستمر في العمل والعلاقات</td></tr>
+    <tr><td>الهوية</td><td>«أنا حزين»</td><td>«أنا لا شيء بدونه»</td></tr>
+    <tr><td>الذكريات</td><td>مختلطة (حلو ومرّ)</td><td>اجترار قهري أو تجنّب كامل</td></tr>
+  </table>
+
+  <h3>النمو بعد الصدمة (Post-Traumatic Growth)</h3>
+  <p>مفهوم علمي وليس تفاؤلًا زائفًا: نسبة من الناس يُبلّغون عن تغيّر إيجابي بعد أزمة عميقة، في خمسة مجالات:</p>
+  <ul class="clean">
+    <li><strong>تقدير أعمق للحياة</strong> وتغيّر الأولويات.</li>
+    <li><strong>علاقات أعمق</strong> وأكثر صدقًا.</li>
+    <li><strong>قوة شخصية</strong> مكتشفة («تحمّلت ما لم أظن أنني أتحمله»).</li>
+    <li><strong>فرص جديدة</strong> لم تكن مطروحة.</li>
+    <li><strong>نمو روحي أو فلسفي</strong> في فهم المعنى.</li>
+  </ul>
+  <p>لكن — وهذا مهم — النمو <strong>ليس شرطًا</strong> ولا يُلام من لم يحققه. الألم ليس أداة تعليمية إلهية؛ هو حدث بيولوجي، وبعض الناس يخرجون منه بجرح لا بحكمة. والاثنان مقبولان.</p>
+
+  <div class="quote">«الشفاء ليس أن تنسى، بل أن تتذكّر دون أن تنهار.»</div>
+
+  <div class="key"><b>تمارين مُثبتة</b>الكتابة التعبيرية (15 دقيقة، 3 أيام متتالية عن المشاعر الأعمق)، واليقظة الذهنية، والنشاط البدني المنتظم — كلها تُظهر أثرًا في تنظيم الانفعال وتقليل الاجترار.</div>
+</section>
+
+<!-- ================= 19 ================= -->
+<section class="page" id="s19">
+  <div class="page-head">
+    <div class="icon-badge"><span class="num">19</span>
+      <svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="16" r="3"/><path d="M11 8h3a2 2 0 0 1 2 2v3M13 16H10a2 2 0 0 1-2-2v-3"/></svg>
+    </div>
+    <div>
+      <h2 class="page-title"><small>أنماط التعلّق</small>أربعة أنماط تحكم حبك</h2>
+      <p class="page-desc">أهم إطار لفهم «لماذا أتصرف هكذا في العلاقات» — وأصله في طفولتك، لا في شريكك.</p>
+    </div>
+  </div>
+
+  <p class="lead">نظرية التعلّق (باولبي، أينسوورث) تقول إن الدماغ يبني في الطفولة <strong>نموذجًا داخليًا</strong> للعلاقات: هل الآخر متاح؟ هل أنا مستحق؟ هذا النموذج يعمل تلقائيًا في الحب الرومانسي.</p>
+
+  <figure>
+    <svg viewBox="0 0 780 480" role="img" aria-label="مصفوفة أنماط التعلق">
+      <line x1="390" y1="40" x2="390" y2="440" stroke="#93a4c4" stroke-opacity=".35"/>
+      <line x1="60" y1="240" x2="730" y2="240" stroke="#93a4c4" stroke-opacity=".35"/>
+      <text class="svg-small" x="390" y="26" text-anchor="middle">قلق مرتفع من الهجر</text>
+      <text class="svg-small" x="390" y="464" text-anchor="middle">قلق منخفض من الهجر</text>
+      <text class="svg-small" x="40" y="240" text-anchor="middle" transform="rotate(-90 40 240)">تجنّب منخفض ← → تجنّب مرتفع</text>
+
+      <rect x="70" y="50" width="300" height="175" rx="16" fill="rgba(255,107,139,.1)" stroke="#ff6b8b" stroke-opacity=".5"/>
+      <text class="svg-label" x="220" y="90" text-anchor="middle" fill="#ff9db1">قلق – متشبّث</text>
+      <text class="svg-small" x="220" y="118" text-anchor="middle">«أخاف أن يتركني»</text>
+      <text class="svg-small" x="220" y="142" text-anchor="middle">حاجة عالية للطمأنة</text>
+      <text class="svg-small" x="220" y="166" text-anchor="middle">حساسية للغموض</text>
+      <text class="svg-small" x="220" y="190" text-anchor="middle">احتجاج عند المسافة</text>
+
+      <rect x="410" y="50" width="300" height="175" rx="16" fill="rgba(139,123,255,.1)" stroke="#8b7bff" stroke-opacity=".5"/>
+      <text class="svg-label" x="560" y="90" text-anchor="middle" fill="#b9aeff">خائف – مضطرب</text>
+      <text class="svg-small" x="560" y="118" text-anchor="middle">«أريده… وأخافه»</text>
+      <text class="svg-small" x="560" y="142" text-anchor="middle">اقتراب ثم انسحاب</text>
+      <text class="svg-small" x="560" y="166" text-anchor="middle">علاقات شديدة التقلب</text>
+      <text class="svg-small" x="560" y="190" text-anchor="middle">أكثر الأنماط ألمًا</text>
+
+      <rect x="70" y="265" width="300" height="175" rx="16" fill="rgba(46,230,197,.1)" stroke="#2ee6c5" stroke-opacity=".55"/>
+      <text class="svg-label" x="220" y="305" text-anchor="middle" fill="#2ee6c5">آمن</text>
+      <text class="svg-small" x="220" y="333" text-anchor="middle">«أثق… وأستطيع أن أكون وحدي»</text>
+      <text class="svg-small" x="220" y="357" text-anchor="middle">تعبير مباشر عن الحاجة</text>
+      <text class="svg-small" x="220" y="381" text-anchor="middle">تنظيم انفعالي أفضل</text>
+      <text class="svg-small" x="220" y="405" text-anchor="middle">تعافٍ أسرع من الأزمات</text>
+
+      <rect x="410" y="265" width="300" height="175" rx="16" fill="rgba(245,196,81,.1)" stroke="#f5c451" stroke-opacity=".5"/>
+      <text class="svg-label" x="560" y="305" text-anchor="middle" fill="#f5c451">متجنّب – مستقل</text>
+      <text class="svg-small" x="560" y="333" text-anchor="middle">«لا أحتاج أحدًا»</text>
+      <text class="svg-small" x="560" y="357" text-anchor="middle">انسحاب عند الضغط</text>
+      <text class="svg-small" x="560" y="381" text-anchor="middle">استقلالية مفرطة</text>
+      <text class="svg-small" x="560" y="405" text-anchor="middle">صعوبة في طلب الدعم</text>
+    </svg>
+    <figcaption><b>مخطط 11:</b> النمط ليس هوية ثابتة، بل <em>استراتيجية تعلّق</em> — ويمكن تغييرها.</figcaption>
+  </figure>
+
+  <h3>من أين يأتي النمط؟</h3>
+  <p>من <strong>اتساق استجابة مقدّم الرعاية</strong> في الطفولة: هل كانت الاستجابة متاحة ومتوقعة؟ أم متقلبة؟ أم غائبة؟ الدماغ يستخلص قاعدة: «العلاقات آمنة/خطرة/غامضة»، ثم يعمل بها في الحب.</p>
+
+  <div class="key"><b>خبر جيد</b>«الأمان المكتسب» (Earned Secure Attachment) حقيقة بحثية: علاقة صحية واحدة، أو علاج، أو وعي ذاتي منتظم، يمكن أن تُعيد تشكيل النمط. الدماغ مرن مدى الحياة.</div>
+
+  <div class="warn key"><b>ملاحظة مهمة</b>لا تستخدم النمط كـ«هوية» أو عذر: «أنا متجنّب، هذا طبعي». النمط وصف لسلوك قابل للتغيير، لا حكم نهائي على شخصيتك.</div>
+</section>
+
+<!-- ================= 20 ================= -->
+<section class="page" id="s20">
+  <div class="page-head">
+    <div class="icon-badge"><span class="num">20</span>
+      <svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg>
+    </div>
+    <div>
+      <h2 class="page-title"><small>الديناميكية الأشهر</small>فخ القلق–التجنب</h2>
+      <p class="page-desc">لماذا يجذب المتجنّبُ القلقَ دائمًا؟ ولماذا يعيدان نفس المشهد إلى ما لا نهاية؟</p>
+    </div>
+  </div>
+
+  <p class="lead">هذا هو النمط الأكثر شيوعًا في العلاقات المؤلمة: شخص <strong>يطلب القرب بشدة</strong>، وشخص <strong>يهرب من القرب</strong>. كل منهما يُفعّل أسوأ ما في الآخر — دون سوء نية.</p>
+
+  <figure>
+    <svg viewBox="0 0 700 480" role="img" aria-label="دورة القلق والتجنب">
+      <circle cx="350" cy="240" r="150" fill="none" stroke="#93a4c4" stroke-opacity=".2" stroke-dasharray="5 6"/>
+
+      <rect x="230" y="40" width="240" height="70" rx="14" fill="rgba(255,107,139,.12)" stroke="#ff6b8b" stroke-opacity=".55"/>
+      <text class="svg-label" x="350" y="68" text-anchor="middle" fill="#ff9db1">القلق: «أحتاج طمأنة»</text>
+      <text class="svg-small" x="350" y="92" text-anchor="middle">رسائل أكثر · لوم · مطاردة</text>
+
+      <rect x="440" y="200" width="230" height="80" rx="14" fill="rgba(245,196,81,.1)" stroke="#f5c451" stroke-opacity=".55"/>
+      <text class="svg-label" x="555" y="230" text-anchor="middle" fill="#f5c451">المتجنّب: «أحتاج مساحة»</text>
+      <text class="svg-small" x="555" y="254" text-anchor="middle">انسحاب · صمت · انشغال</text>
+
+      <rect x="230" y="370" width="240" height="70" rx="14" fill="rgba(139,123,255,.12)" stroke="#8b7bff" stroke-opacity=".55"/>
+      <text class="svg-label" x="350" y="398" text-anchor="middle" fill="#b9aeff">القلق: «انظر، لقد ابتعد!»</text>
+      <text class="svg-small" x="350" y="422" text-anchor="middle">ذعر · تصعيد · تهديد بالانفصال</text>
+
+      <rect x="30" y="200" width="230" height="80" rx="14" fill="rgba(46,230,197,.1)" stroke="#2ee6c5" stroke-opacity=".55"/>
+      <text class="svg-label" x="145" y="230" text-anchor="middle" fill="#2ee6c5">المتجنّب: «تضغط عليّ»</text>
+      <text class="svg-small" x="145" y="254" text-anchor="middle">تبريد أكبر · انسحاب أعمق</text>
+
+      <path d="M470 90 C560 110 590 160 570 195" stroke="#ff6b8b" stroke-width="2.2" fill="none" marker-end="url(#ar3)"/>
+      <path d="M560 285 C540 340 480 375 470 388" stroke="#f5c451" stroke-width="2.2" fill="none" marker-end="url(#ar3)"/>
+      <path d="M230 405 C150 395 110 340 120 285" stroke="#8b7bff" stroke-width="2.2" fill="none" marker-end="url(#ar3)"/>
+      <path d="M160 195 C180 150 240 115 275 100" stroke="#2ee6c5" stroke-width="2.2" fill="none" marker-end="url(#ar3)"/>
+      <defs><marker id="ar3" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6Z" fill="#93a4c4"/></marker></defs>
+
+      <text class="svg-small" x="350" y="240" text-anchor="middle">دورة تتكرر كل أسبوعين</text>
+    </svg>
+    <figcaption><b>مخطط 12:</b> كل طرف يرى نفسه الضحية. الحقيقة: كلاهما يستجيب لتهديد داخلي، لا لسوء نية.</figcaption>
+  </figure>
+
+  <h3>ما يحدث داخل كل دماغ</h3>
+  <div class="grid2">
+    <div class="card rose"><span class="tag">القلق</span><h4>لوزة مفرطة التنشيط</h4><p>الغموض = تهديد. الصمت يُقرأ كرفض. الجهاز العصبي في حالة استنفار، فيطلب تأكيدًا متكررًا — والتأكيد يهدئ لدقائق ثم يعود القلق.</p></div>
+    <div class="card gold"><span class="tag">المتجنّب</span><h4>كبح جبهي مبكر</h4><p>القرب الشديد يُفعّل نظام تهديد آخر: «سأفقد استقلالي». فيُطفئ المشاعر تلقائيًا (Suppression) وينسحب — وهو ليس برودًا، بل <em>دفاع</em>.</p></div>
+  </div>
+
+  <div class="key"><b>كيف تخرج من الدورة؟</b>لا بتحويل أحدهما إلى الآخر، بل بـ<strong>عقد صريح</strong>: القلق يتعلّم طلب الطمأنة مرة واحدة بجملة محددة (لا سبع مرات)، والمتجنّب يتعلّم البقاء حاضرًا 5 دقائق قبل طلب المساحة. تُسمّى هذه «حلقة أمان» — وهي قابلة للتدريب.</div>
+</section>
+
+<!-- ================= 21 ================= -->
+<section class="page" id="s21">
+  <div class="page-head">
+    <div class="icon-badge"><span class="num">21</span>
+      <svg viewBox="0 0 24 24"><path d="M12 3a5 5 0 0 0-5 5v3a5 5 0 0 0 10 0V8a5 5 0 0 0-5-5Z"/><path d="M12 16v5M8 21h8"/></svg>
+    </div>
+    <div>
+      <h2 class="page-title"><small>المهارة الأساسية</small>تنظيم العاطفة</h2>
+      <p class="page-desc">ليست «كتم المشاعر». إنها القدرة على اختيار ما تفعله بها — وهي مهارة قابلة للتدريب.</p>
+    </div>
+  </div>
+
+  <p class="lead">القشرة الجبهية الأمامية هي «المدير التنفيذي». اللوزة هي «جهاز الإنذار». العلاقة بينهما تحدد جودة حياتك العاطفية أكثر من أي شيء آخر.</p>
+
+  <figure>
+    <svg viewBox="0 0 820 340" role="img" aria-label="التنظيم من الأعلى للأسفل">
+      <rect x="290" y="40" width="240" height="80" rx="16" fill="rgba(46,230,197,.1)" stroke="#2ee6c5" stroke-opacity=".55"/>
+      <text class="svg-label" x="410" y="72" text-anchor="middle" fill="#2ee6c5">القشرة الجبهية</text>
+      <text class="svg-small" x="410" y="96" text-anchor="middle">إعادة التقييم · التخطيط · الكبح</text>
+
+      <rect x="290" y="220" width="240" height="80" rx="16" fill="rgba(255,107,139,.12)" stroke="#ff6b8b" stroke-opacity=".55"/>
+      <text class="svg-label" x="410" y="252" text-anchor="middle" fill="#ff9db1">اللوزة</text>
+      <text class="svg-small" x="410" y="276" text-anchor="middle">الإنذار · الخوف · الغضب</text>
+
+      <path d="M360 120 L360 216" stroke="#2ee6c5" stroke-width="3" fill="none"/>
+      <path d="M460 216 L460 120" stroke="#93a4c4" stroke-width="2" stroke-dasharray="5 5" fill="none"/>
+      <text class="svg-small" x="330" y="172" text-anchor="middle" fill="#2ee6c5">كبح</text>
+      <text class="svg-small" x="500" y="172" text-anchor="middle">إنذار</text>
+
+      <text class="svg-label" x="130" y="130" text-anchor="middle" fill="#f5c451">إعادة التقييم</text>
+      <text class="svg-small" x="130" y="152" text-anchor="middle">«هو مشغول، لا بارد»</text>
+      <text class="svg-small" x="130" y="176" text-anchor="middle">↓ تنشيط اللوزة</text>
+
+      <text class="svg-label" x="690" y="130" text-anchor="middle" fill="#ff6b8b">الكبت</text>
+      <text class="svg-small" x="690" y="152" text-anchor="middle">«لن أشعر بشيء»</text>
+      <text class="svg-small" x="690" y="176" text-anchor="middle">↑ تنشيط اللوزة لاحقًا</text>
+
+      <path d="M250 140 L286 110" stroke="#f5c451" stroke-width="2" fill="none"/>
+      <path d="M570 140 L534 110" stroke="#ff6b8b" stroke-width="2" fill="none"/>
+    </svg>
+    <figcaption><b>مخطط 13:</b> استراتيجيتان متقابلتان. الأولى تُخفض الاستثارة فعليًا، الثانية تُخفيها وتُبقيها.</figcaption>
+  </figure>
+
+  <h3>ثلاث استراتيجيات، واحدة ناجحة</h3>
+  <table>
+    <tr><th>الاستراتيجية</th><th>ماذا تفعل</th><th>النتيجة</th></tr>
+    <tr><td><strong>إعادة التقييم</strong> (Reappraisal)</td><td>تغيير معنى الموقف: «تأخره ليس رفضًا، بل ظرف»</td><td>↓ نشاط اللوزة، ↓ الكورتيزول — الأكثر فاعلية</td></tr>
+    <tr><td><strong>الكبت التعبيري</strong> (Suppression)</td><td>إخفاء ما تشعر به</td><td>↓ السلوك الظاهر، لكن ↑ الاستثارة الداخلية والضغط</td></tr>
+    <tr><td><strong>الاجترار</strong> (Rumination)</td><td>تكرار الفكرة نفسها</td><td>↑ الكورتيزول، ↑ خطر الاكتئاب</td></tr>
+  </table>
+
+  <h3>تقنيات تعمل في اللحظة</h3>
+  <ol class="steps">
+    <li><strong>التسمية:</strong> «أشعر بالخوف من الرفض». تسمية الانفعال بكلمة تُخفض نشاط اللوزة وتزيد نشاط القشرة الجبهية — وهذا ما يُسمّى <em>Affect Labeling</em>.</li>
+    <li><strong>التنفّس الممتد:</strong> شهيق 4، حبس 2، زفير 6. الزفير الأطول يُنشّط الجهاز الباراسمبثاوي (الراحة).</li>
+    <li><strong>الفصل الزمني:</strong> «سأقرر بعد 24 ساعة». يمنح القشرة الجبهية وقتًا لاستعادة السيطرة.</li>
+    <li><strong>تغيير الجسد:</strong> مشي 10 دقائق، ماء بارد على الوجه — يُعيد ضبط الإيقاع اللاإرادي.</li>
+  </ol>
+
+  <div class="key"><b>الفكرة الكبرى</b>لا يمكنك منع اللوزة من الإطلاق — ولا يجب. المهارة هي <strong>الوقت بين الإطلاق والاستجابة</strong>. كل ثانية إضافية هناك هي حرية.</div>
+</section>
+
+<!-- ================= 22 ================= -->
+<section class="page" id="s22">
+  <div class="page-head">
+    <div class="icon-badge"><span class="num">22</span>
+      <svg viewBox="0 0 24 24"><path d="M12 2v20M6 6l6-4 6 4M6 18l6 4 6-4"/></svg>
+    </div>
+    <div>
+      <h2 class="page-title"><small>الثمن البيولوجي</small>الإجهاد المزمن والكورتيزول</h2>
+      <p class="page-desc">العلاقة السيئة لا تُحزنك فقط — بل تُمرضك. والعلاقة الجيدة تُعالجك.</p>
+    </div>
+  </div>
+
+  <p class="lead">الحب ليس «مشاعر» فقط، بل <strong>منظّم فسيولوجي</strong>. وجود شخص آمن يُخفض الكورتيزول وضغط الدم ومعدل ضربات القلب. غيابه أو تقلّبه يرفعها.</p>
+
+  <h3>ما يفعله الإجهاد المزمن بالجسم</h3>
+  <div class="grid2">
+    <div class="card rose"><span class="tag">الدماغ</span><h4>ضعف الذاكرة والتنظيم</h4><p>الكورتيزول المرتفع مزمنًا يُثبّط الحُصين ويُضعف القدرة على التعلّم، ويُقلل فعالية القشرة الجبهية.</p></div>
+    <div class="card gold"><span class="tag">الجسم</span><h4>مناعة أضعف ونوم أسوأ</h4><p>ارتفاع مستمر في الكورتيزول يرتبط بضعف المناعة، وزيادة الالتهاب، واضطراب النوم — وهي أعراض يشكو منها كثيرون في علاقات مضطربة.</p></div>
+  </div>
+
+  <h3>اختبار سريع: هل علاقتك تُجهدك؟</h3>
+  <p>اسأل نفسك عن الشهر الماضي فقط:</p>
+  <ul class="clean">
+    <li>هل أفكّر في العلاقة أكثر مما أفكّر في أي شيء آخر؟</li>
+    <li>هل أشعر بالتوتر قبل أن أفتح رسائله؟</li>
+    <li>هل نومي أو شهيتي تغيّرا؟</li>
+    <li>هل أشعر بالراحة فقط في فترات «الصلح» القصيرة؟</li>
+    <li>هل تدهورت علاقاتي الأخرى أو عملي؟</li>
+  </ul>
+  <p>ثلاث إجابات «نعم» أو أكثر = مؤشر يستحق الانتباه. لا يعني أن العلاقة «سيئة»، لكنه يعني أن جهازك العصبي في <strong>استنفار مزمن</strong>.</p>
+
+  <div class="key"><b>مبدأ الشفاء</b>الجهاز العصبي لا يُهدّأ بالكلام عن الهدوء، بل بـ<strong>تجارب أمان متكررة</strong>: نوم منتظم، حركة يومية، تواصل مع أشخاص آمنين، وتقليل التعرّض للمُنبّه المُقلق (بما فيه الحسابات والرسائل).</div>
+</section>
+
+<!-- ================= 23 ================= -->
+<section class="page" id="s23">
+  <div class="page-head">
+    <div class="icon-badge"><span class="num">23</span>
+      <svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>
+    </div>
+    <div>
+      <h2 class="page-title"><small>المعيار</small>تشريح العلاقة الصحية</h2>
+      <p class="page-desc">ثمانية مؤشرات يمكن قياسها — لا «إحساس» غامض.</p>
+    </div>
+  </div>
+
+  <p class="lead">العلاقة الصحية ليست علاقة بلا مشاكل. إنها علاقة فيها <strong>أدوات</strong> للتعامل مع المشاكل، وفيها جهاز عصبيان يستطيعان العودة إلى الهدوء بعد التوتر.</p>
+
+  <table>
+    <tr><th>#</th><th>المؤشر</th><th>كيف يظهر عمليًا</th><th>الأساس العصبي</th></tr>
+    <tr><td>1</td><td><strong>الأمان</strong></td><td>تستطيع أن تقول «أنا متعب» دون خوف من العقاب</td><td>لوزة هادئة + أوكسيتوسين</td></tr>
+    <tr><td>2</td><td><strong>الإصلاح</strong></td><td>بعد الخلاف، هناك من يمدّ الجسر</td><td>قشرة جبهية نشطة</td></tr>
+    <tr><td>3</td><td><strong>الاستجابة للمحاولات</strong></td><td>حين تقول «انظر لهذا» فينظر</td><td>دائرة مكافأة اجتماعية</td></tr>
+    <tr><td>4</td><td><strong>الحدود</strong></td><td>«لا» مقبولة دون دراما</td><td>تنظيم انفعالي ناضج</td></tr>
+    <tr><td>5</td><td><strong>الدعم للاستقلال</strong></td><td>يشجّعك على نموّك لا على تبعيّتك</td><td>توسّع ذاتي مشترك</td></tr>
+    <tr><td>6</td><td><strong>الصدق</strong></td><td>لا حاجة لمراقبة أو تجسّس</td><td>خفض نشاط اللوزة</td></tr>
+    <tr><td>7</td><td><strong>المرح</strong></td><td>تضحكان معًا بسهولة</td><td>إندورفينات</td></tr>
+    <tr><td>8</td><td><strong>التناسب</strong></td><td>العطاء متبادل، لا حساب دقيق</td><td>ثقة تعلّق آمن</td></tr>
+  </table>
+
+  <h3>«محاولات التواصل» (Bids)</h3>
+  <p>غوتتمان يسمّي كل محاولة صغيرة للتواصل «bid»: تعليق، نظرة، تنهيدة، رسالة. العلاقة تنجح أو تفشل بحسب <strong>نسبة الاستجابة</strong> لهذه المحاولات. الأزواج المستقرون يستجيبون لمعظمها؛ المنفصلون يتجاهلونها.</p>
+
+  <div class="key"><b>تمرين اليوم</b>عدّ محاولات شريكك في يوم واحد (كم مرة يشاركك شيئًا صغيرًا). استجب لكل واحدة بجملة واحدة على الأقل. لا تفعل شيئًا آخر. هذا التمرين وحده يُغيّر مناخ العلاقة في أسبوع.</div>
+</section>
+
+<!-- ================= 24 ================= -->
+<section class="page" id="s24">
+  <div class="page-head">
+    <div class="icon-badge"><span class="num">24</span>
+      <svg viewBox="0 0 24 24"><path d="M12 2 2 20h20L12 2Z"/><path d="M12 9v5M12 17v.5"/></svg>
+    </div>
+    <div>
+      <h2 class="page-title"><small>الحماية</small>الأعلام الحمراء العصبية</h2>
+      <p class="page-desc">أربع تقنيات تستخدم كيمياء دماغك ضدك. معرفتها تُحصّنك.</p>
+    </div>
+  </div>
+
+  <p class="lead">ليست كل شدة حبًا، وليس كل شغف صحيًا. بعض أنماط العلاقات تُنتج <strong>إدمانًا</strong> يشبه المخدرات، ويُلبس ثوب «الحب العظيم».</p>
+
+  <div class="grid2">
+    <div class="card rose"><span class="tag">1</span><h4>القصف العاطفي (Love Bombing)</h4>
+      <p>اهتمام مفرط وسريع: رسائل بلا توقف، وعود كبيرة، «أنت توأم روحي» خلال أسبوعين. يُفرز دوبامين هائل يُشبه نشوة المخدر.</p>
+      <p><em>العلامة:</em> السرعة غير المنطقية + الرغبة في عزلك عن محيطك.</p></div>
+    <div class="card gold"><span class="tag">2</span><h4>التعزيز المتقطع</h4>
+      <p>حنان ثم برود ثم حنان. هذا الجدول — عشوائي المكافأة — هو الأقوى في إنتاج السلوك القهري (نفس مبدأ ماكينات القمار).</p>
+      <p><em>العلامة:</em> تعيش على «أعذار» وتنتظر النسخة اللطيفة.</p></div>
+    <div class="card violet"><span class="tag">3</span><h4>الارتباط بالصدمة (Trauma Bonding)</h4>
+      <p>دورة: توتر → إساءة → صلح عاطفي شديد. الأدرينالين + الأوكسيتوسين يخلقان ارتباطًا عميقًا بالمُسيء.</p>
+      <p><em>العلامة:</em> «لا أحد يفهمني مثله» بعد كل أزمة.</p></div>
+    <div class="card rose"><span class="tag">4</span><h4>التلاعب بالإدراك (Gaslighting)</h4>
+      <p>إنكار ما حدث، وتشكيك في ذاكرتك وإحساسك. النتيجة: اعتماد أكبر على المُسيء للحكم على الواقع.</p>
+      <p><em>العلامة:</em> «أنا حساس زيادة»، «أنا أتخيّل».</p></div>
+  </div>
+
+  <h3>علامات لا يجب تجاهلها</h3>
+  <ul class="clean">
+    <li>تشتّت هويتك: لم تعد تعرف ما تحب أو ما تريد.</li>
+    <li>انقطاع عن الأصدقاء والعائلة تدريجيًا.</li>
+    <li>الخوف من «ردّ فعل» عند التعبير عن رأي مختلف.</li>
+    <li>الشعور بأنك «تُدين» دائمًا وتعتذر دون سبب واضح.</li>
+    <li>تقلّب حاد: قمة عاطفية ثم انهيار ثم قمة.</li>
+  </ul>
+
+  <div class="warn key"><b>قاعدة الأمان</b>الحب الصحي يزيدك <strong>اتساعًا</strong>: أصدقاء أكثر، طموح أكبر، راحة أعمق. الحب السام يزيدك <strong>ضيقًا</strong>: عالم أصغر، قلق أكبر، ذات أضعف. إذا كنت تصغر مع شخص، فهذه ليست علاقة — هذه خسارة تدريجية.</div>
+</section>
+
+<!-- ================= 25 ================= -->
+<section class="page" id="s25">
+  <div class="page-head">
+    <div class="icon-badge"><span class="num">25</span>
+      <svg viewBox="0 0 24 24"><path d="M12 3 22 20H2L12 3Z"/><path d="M12 9v5"/><path d="M9 20 12 9l3 11"/></svg>
+    </div>
+    <div>
+      <h2 class="page-title"><small>التصنيف</small>أنواع الحب السبعة</h2>
+      <p class="page-desc">نموذج ستيرنبرغ: ثلاثة مكوّنات، سبع توليفات. أين علاقتك على الخريطة؟</p>
+    </div>
+  </div>
+
+  <p class="lead">روبرت ستيرنبرغ اقترح أن الحب يتكوّن من ثلاثة أبعاد: <strong>الحميمية</strong> (قرب ومشاركة)، <strong>الشغف</strong> (جذب واندفاع)، <strong>الالتزام</strong> (قرار البقاء). كل توليفة تُنتج نوعًا مختلفًا — وبعضها ليس حبًا أصلًا.</p>
+
+  <figure>
+    <svg viewBox="0 0 700 420" role="img" aria-label="مثلث الحب لستيرنبرغ">
+      <polygon points="350,50 110,360 590,360" fill="none" stroke="#2ee6c5" stroke-opacity=".5" stroke-width="2"/>
+      <text class="svg-label" x="350" y="36" text-anchor="middle" fill="#2ee6c5">الحميمية</text>
+      <text class="svg-label" x="95" y="385" text-anchor="middle" fill="#f5c451">الشغف</text>
+      <text class="svg-label" x="605" y="385" text-anchor="middle" fill="#ff6b8b">الالتزام</text>
+      <circle cx="350" cy="255" r="60" fill="rgba(139,123,255,.14)" stroke="#8b7bff" stroke-opacity=".6"/>
+      <text class="svg-label" x="350" y="250" text-anchor="middle" fill="#b9aeff">الحب</text>
+      <text class="svg-label" x="350" y="272" text-anchor="middle" fill="#b9aeff">المتكامل</text>
+      <text class="svg-small" x="350" y="405" text-anchor="middle">مساحة المثلث = حجم الحب · موقعك داخله = نوعه</text>
+    </svg>
+    <figcaption><b>مخطط 14:</b> العلاقة الناضجة هي احتلال مركز المثلث — وليس قمة واحدة.</figcaption>
+  </figure>
+
+  <table>
+    <tr><th>النوع</th><th>المكوّنات</th><th>الوصف</th></tr>
+    <tr><td>الإعجاب</td><td>حميمية فقط</td><td>صداقة قريبة بلا شغف أو التزام — حب الأصدقاء.</td></tr>
+    <tr><td>الهيام</td><td>شغف فقط</td><td>افتتان عارم بلا معرفة أو التزام — «الحب من أول نظرة».</td></tr>
+    <tr><td>الحب الفارغ</td><td>التزام فقط</td><td>بقاء بسبب العادة أو الظروف، بلا دفء ولا لهفة.</td></tr>
+    <tr><td>الحب الرومانسي</td><td>حميمية + شغف</td><td>قرب ولهفة، دون قرار طويل الأمد.</td></tr>
+    <tr><td>الحب الرفيقي</td><td>حميمية + التزام</td><td>صداقة عميقة مستقرة — حب طويل الأمد بعد خفوت الشغف.</td></tr>
+    <tr><td>الحب الأحمق</td><td>شغف + التزام</td><td>التزام مبني على الانجذاب دون معرفة حقيقية — الزواج السريع.</td></tr>
+    <tr><td><strong>الحب المتكامل</strong></td><td>الثلاثة معًا</td><td>الهدف: صعب الوصول، وصعب الحفاظ عليه — لكنه ممكن.</td></tr>
+  </table>
+
+  <div class="key"><b>سؤال للطرفين</b>قيّما كل بُعد من 10. ثم قارنا. كثير من الخلافات ليست «حبًا ناقصًا»، بل <strong>اختلاف في توزيع الأبعاد</strong>: هو يريد شغفًا، وهي تريد التزامًا، وكلاهما يرى الآخر «ناقصًا».</div>
+</section>
+
+<!-- ================= 26 ================= -->
+<section class="page" id="s26">
+  <div class="page-head">
+    <div class="icon-badge"><span class="num">26</span>
+      <svg viewBox="0 0 24 24"><path d="M4 20 20 4"/><path d="M14 4h6v6"/><path d="M4 14v6h6"/></svg>
+    </div>
+    <div>
+      <h2 class="page-title"><small>لحظة الخلاف</small>فرسان الخراب الأربعة</h2>
+      <p class="page-desc">أربعة أنماط تواصل تتنبأ بانهيار العلاقة — وبديل لكل منها.</p>
+    </div>
+  </div>
+
+  <p class="lead">جون غوتيمان درس آلاف الأزواج لعقود، وحدّد أربعة أنماط تُنذر بالانفصال. المهم: كل نمط له <strong>مضادّ</strong> يمكن تعلّمه.</p>
+
+  <table>
+    <tr><th>الفارس</th><th>كيف يظهر</th><th>ما يفعله بالدماغ</th><th>البديل</th></tr>
+    <tr><td><strong>النقد</strong></td><td>«أنت دائمًا مهمل»</td><td>يهاجم الهوية → دفاع فوري</td><td>شكوى محددة: «نسيت الموعد، وأنا متعب»</td></tr>
+    <tr><td><strong>الاحتقار</strong></td><td>سخرية، تقليل، لوي الشفاه</td><td>الأكثر تدميرًا — يعطي إشارة «أنت أدنى»</td><td>بناء ثقافة تقدير يومية</td></tr>
+    <tr><td><strong>الدفاع</strong></td><td>«أنا لست المخطئ، أنتِ بدأتِ»</td><td>يمنع استقبال أي معلومة</td><td>تحمّل جزء صغير من المسؤولية</td></tr>
+    <tr><td><strong>الجدار الحجري</strong></td><td>صمت، انسحاب، تجنّب النظر</td><td>يُقرأ كرفض كامل، ويُصعّد الطرف الآخر</td><td>«أحتاج 20 دقيقة، وسأعود»</td></tr>
+  </table>
+
+  <h3>الفيضان الفسيولوجي (Flooding)</h3>
+  <p>عندما يتجاوز معدل ضربات القلب نحو 100 نبضة/دقيقة أثناء النقاش، ينتقل الدماغ إلى وضع «بقاء»: لا استماع، لا حلول، لا تعاطف. هذا ليس اختيارًا — إنه <strong>انقطاع فسيولوجي</strong>.</p>
+
+  <div class="key"><b>القاعدة الذهبية</b>لا تحاول حلّ خلاف وأنت في فيضان. توقّف 20 دقيقة على الأقل (الوقت اللازم لتهدئة الاستثارة)، ثم عُد. الاتفاق على «إشارة توقف» مسبقة أفضل من أي محاولة إقناع في اللحظة.</div>
+
+  <h3>نسبة 5:1</h3>
+  <p>غوتيمان وجد أن العلاقات المستقرة لديها نحو خمس تفاعلات إيجابية مقابل كل تفاعل سلبي أثناء الخلاف. ليست «لا سلبيات» — بل <strong>رصيد كافٍ</strong> يسمح بتحمّل الخلاف.</p>
+
+  <div class="warn key"><b>علامة إنذار</b>إذا كانت نسبة التفاعلات السلبية إلى الإيجابية تقترب من 1:1 أو تنعكس، فالعلاقة تحتاج تدخلًا جدّيًا — وليس مجرد «مزيد من الصبر».</div>
+</section>
+
+<!-- ================= 27 ================= -->
+<section class="page" id="s27">
+  <div class="page-head">
+    <div class="icon-badge"><span class="num">27</span>
+      <svg viewBox="0 0 24 24"><circle cx="9" cy="9" r="5"/><circle cx="15" cy="15" r="5"/></svg>
+    </div>
+    <div>
+      <h2 class="page-title"><small>الجسد والحب</small>الرغبة مقابل الحميمية</h2>
+      <p class="page-desc">نظامان متعاكسان في احتياجاتهما: الرغبة تريد الجديد، والأمان يريد المألوف.</p>
+    </div>
+  </div>
+
+  <p class="lead">هذه واحدة من أكبر المفارقات في علم العلاقات: ما يُشعل الرغبة هو <strong>المسافة والغموض والجِدّة</strong>، وما يُشعل التعلّق هو <strong>القرب والتنبؤ والأمان</strong>. لذلك يمكن أن يهدأ الجسد بينما يزداد الحب.</p>
+
+  <table>
+    <tr><th>البُعد</th><th>الرغبة الجنسية</th><th>التعلّق العاطفي</th></tr>
+    <tr><td>ما يزيدها</td><td>الجِدّة، المسافة، الإثارة، الغموض</td><td>التكرار، القرب، اللمس، التنبؤ</td></tr>
+    <tr><td>ما يقلّلها</td><td>الروتين، الإفراط في الأمان</td><td>الغموض، التهديد، الانقطاع</td></tr>
+    <tr><td>النظام العصبي</td><td>دوبامين + تستوستيرون</td><td>أوكسيتوسين + إندورفين</td></tr>
+    <tr><td>الخطر</td><td>الملل والبحث عن الجديد</td><td>الاعتماد المفرط وفقدان الذات</td></tr>
+  </table>
+
+  <h3>حلّ المفارقة</h3>
+  <p>ليس باختيار أحدهما، بل ببناء <strong>«مسافة آمنة»</strong>: قرب عاطفي عميق مع مساحة شخصية محفوظة. الأزواج الذين يحافظون على اهتمامات مستقلة، وأصدقاء مستقلين، وقدر من الغموض الصحي — يحافظون على الرغبة أطول.</p>
+
+  <div class="key"><b>ثلاثة تطبيقات</b>
+    <br>1) لا تُلغِ نفسك في العلاقة — الفردية تُغذّي الجذب.
+    <br>2) اجعل اللقاء حدثًا لا روتينًا: مواعيد متجددة، لا «نفس المساء كل يوم».
+    <br>3) تكلّما عن الرغبة بصراحة — الصمت حول الجنس أسرع طريق لموته.</div>
+
+  <div class="ref">ملاحظة علمية: مفهوم «الرغبة المستجيبة» (responsive desire) — أي الرغبة التي تبدأ بعد الاستثارة لا قبلها — شائع خصوصًا لدى النساء، وهو طبيعي وليس خللًا.</div>
+</section>
+
+<!-- ================= 28 ================= -->
+<section class="page" id="s28">
+  <div class="page-head">
+    <div class="icon-badge"><span class="num">28</span>
+      <svg viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4V5Z"/><path d="M8 9h8M8 12.5h5"/></svg>
+    </div>
+    <div>
+      <h2 class="page-title"><small>الجزء التربوي</small>كيف تُدرّس هذا للناس؟</h2>
+      <p class="page-desc">من الفهم إلى التعليم: إطار من أربع خطوات، وخطة جلسة 90 دقيقة جاهزة.</p>
+    </div>
+  </div>
+
+  <p class="lead">التدريس الناجح لعلم الأعصاب العاطفي لا يبدأ بالمصطلحات، بل بـ<strong>تجربة يعيشها المتعلّم</strong> ثم تفسيرها. القاعدة: «اشعر أولًا، افهم ثانيًا، سمِّ ثالثًا، طبّق رابعًا».</p>
+
+  <h3>إطار التدريس الرباعي (S-N-A-A)</h3>
+  <div class="grid2">
+    <div class="card"><span class="tag">1 · Sense</span><h4>اشعر</h4><p>ابدأ بموقف يعرفه الجميع: «آخر مرة أرسلت رسالة وانتظرت الرد». اسأل: ماذا حدث في جسمك؟ اجمع الإجابات على السبورة.</p></div>
+    <div class="card gold"><span class="tag">2 · Name</span><h4>سمِّ</h4><p>قدّم الاسم العلمي لما شعروا به: تنشيط اللوزة، نقص السيروتونين، خطأ التوقع. الآن المصطلح يشرح تجربة، لا يُحفظ وحده.</p></div>
+    <div class="card violet"><span class="tag">3 · Apply</span><h4>طبّق</h4><p>أعطِ تمرينًا واحدًا قابلًا للتنفيذ خلال 24 ساعة (تسمية الانفعال، تأجيل الرد 24 ساعة، احتضان 18 ثانية).</p></div>
+    <div class="card"><span class="tag">4 · Anchor</span><h4>ثبّت</h4><p>اربط الفكرة بصورة أو مخطط واحد يتذكره المتعلّم بعد أسبوعين. مخطط واحد قوي أفضل من عشرين شريحة.</p></div>
+  </div>
+
+  <h3>خطة جلسة 90 دقيقة</h3>
+  <table>
+    <tr><th>الوقت</th><th>النشاط</th><th>الهدف</th></tr>
+    <tr><td>0–10</td><td>سؤال افتتاحي + تصويت سريع</td><td>كسر الحاجز وجمع الخبرة</td></tr>
+    <tr><td>10–25</td><td>مخطط الأنظمة الثلاثة</td><td>الإطار النظري الأساسي</td></tr>
+    <tr><td>25–45</td><td>تمرين: «أين أنا الآن؟» توزيع الأنظمة</td><td>تطبيق شخصي</td></tr>
+    <tr><td>45–60</td><td>خط الزمن + الفجوة (الشهر 6–18)</td><td>تصحيح التفسير الخاطئ</td></tr>
+    <tr><td>60–75</td><td>أنماط التعلّق: مصفوفة 2×2</td><td>فهم ديناميكية العلاقة</td></tr>
+    <tr><td>75–85</td><td>الأعلام الحمراء العصبية</td><td>الحماية</td></tr>
+    <tr><td>85–90</td><td>تمرين واحد للتنفيذ</td><td>نقل التعلّم إلى الحياة</td></tr>
+  </table>
+
+  <h3>أخطاء شائعة في التدريس</h3>
+  <ul class="clean">
+    <li><strong>التبسيط المفرط:</strong> «الدوبامين = هرمون الحب». خطأ يُنتج فهمًا مشوّهًا. قل: «الدوبامين مسؤول عن الرغبة والسعي، لا عن السعادة».</li>
+    <li><strong>الوصم:</strong> تحويل أنماط التعلّق إلى تصنيفات ثابتة للناس. الأنماط وصف سلوك، لا هوية.</li>
+    <li><strong>الإفراط في اليقين:</strong> علم الأعصاب الاجتماعي مليء بنتائج قابلة للنقاش. علّم الناس أن يقولوا «الأدلة تشير» لا «العلم أثبت نهائيًا».</li>
+    <li><strong>إهمال الثقافة:</strong> التعبير عن الحب يختلف بين المجتمعات. العصبية ثابتة أكثر، لكن السلوك مُتشكّل ثقافيًا.</li>
+  </ul>
+
+  <div class="key"><b>اختبار الفهم الحقيقي</b>اطلب من المتعلّم أن يشرح الفكرة لشخص لم يحضر. إن استطاع في دقيقتين بمثال من حياته — فقد فهم. إن أعاد المصطلحات فقط — لم يفهم بعد.</div>
+</section>
+
+<!-- ================= 29 ================= -->
+<section class="page" id="s29">
+  <div class="page-head">
+    <div class="icon-badge"><span class="num">29</span>
+      <svg viewBox="0 0 24 24"><path d="M8 2v4M16 2v4M3 10h18"/><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M8 15h3M8 18h6"/></svg>
+    </div>
+    <div>
+      <h2 class="page-title"><small>التطبيق</small>بروتوكول 30 يومًا</h2>
+      <p class="page-desc">من المعرفة إلى التغيير: أربعة أسابيع، كل أسبوع مهارة واحدة فقط.</p>
+    </div>
+  </div>
+
+  <p class="lead">المعرفة وحدها لا تُغيّر الدماغ؛ <strong>التكرار</strong> يُغيّره. هذا بروتوكول مبني على مبادئ اللدونة العصبية: جرعة صغيرة يوميًا، لمدة كافية.</p>
+
+  <figure>
+    <svg viewBox="0 0 860 300" role="img" aria-label="خطة 30 يومًا">
+      <line x1="60" y1="150" x2="810" y2="150" stroke="#2ee6c5" stroke-opacity=".35" stroke-width="2"/>
+      <circle cx="170" cy="150" r="10" fill="#ff6b8b"/><circle cx="370" cy="150" r="10" fill="#f5c451"/>
+      <circle cx="570" cy="150" r="10" fill="#2ee6c5"/><circle cx="770" cy="150" r="10" fill="#8b7bff"/>
+
+      <text class="svg-label" x="170" y="110" text-anchor="middle" fill="#ff9db1">الأسبوع 1</text>
+      <text class="svg-small" x="170" y="132" text-anchor="middle">الوعي</text>
+      <text class="svg-small" x="170" y="185" text-anchor="middle">لاحظ · سمِّ · سجّل</text>
+
+      <text class="svg-label" x="370" y="110" text-anchor="middle" fill="#f5c451">الأسبوع 2</text>
+      <text class="svg-small" x="370" y="132" text-anchor="middle">التنظيم</text>
+      <text class="svg-small" x="370" y="185" text-anchor="middle">تنفّس · تأجيل · حركة</text>
+
+      <text class="svg-label" x="570" y="110" text-anchor="middle" fill="#2ee6c5">الأسبوع 3</text>
+      <text class="svg-small" x="570" y="132" text-anchor="middle">التواصل</text>
+      <text class="svg-small" x="570" y="185" text-anchor="middle">طلب · حدود · إصلاح</text>
+
+      <text class="svg-label" x="770" y="110" text-anchor="middle" fill="#b9aeff">الأسبوع 4</text>
+      <text class="svg-small" x="770" y="132" text-anchor="middle">البناء</text>
+      <text class="svg-small" x="770" y="185" text-anchor="middle">تجارب جديدة · معنى</text>
+    </svg>
+    <figcaption><b>مخطط 15:</b> التدرّج مقصود: لا يمكن تنظيم ما لا تراه، ولا يمكن التواصل قبل التنظيم.</figcaption>
+  </figure>
+
+  <h3>الأسبوع 1 — الوعي</h3>
+  <ul class="clean">
+    <li>سجّل 3 مواقف يوميًا: الموقف / الإحساس الجسدي / التفسير / الفعل.</li>
+    <li>سمِّ الانفعال بكلمة دقيقة (ليس «تعبان» بل «خائف من الرفض»).</li>
+    <li>حدّد نمط تعلّقك الأولي بصدق — كفرضية، لا كحكم.</li>
+  </ul>
+
+  <h3>الأسبوع 2 — التنظيم</h3>
+  <ul class="clean">
+    <li>تنفّس 4-2-6 عند أول إشارة توتر، ثلاث مرات يوميًا.</li>
+    <li>قاعدة 24 ساعة قبل أي قرار عاطفي كبير (رسالة، تهديد، انفصال).</li>
+    <li>حركة 20 دقيقة يوميًا — تُنظّم الدوبامين والكورتيزول.</li>
+  </ul>
+
+  <h3>الأسبوع 3 — التواصل</h3>
+  <ul class="clean">
+    <li>صيغة الطلب: «أشعر ___ عندما ___ وأحتاج ___».</li>
+    <li>حدّد حدًّا واحدًا واضحًا وقله دون اعتذار مفرط.</li>
+    <li>تمرين الإصلاح: بعد أي خلاف، نفّذ الخطوات الثلاث (اعتراف، مسؤولية، خطة).</li>
+  </ul>
+
+  <h3>الأسبوع 4 — البناء</h3>
+  <ul class="clean">
+    <li>تجربة جديدة واحدة مع شريكك (أو مع نفسك) كل أسبوع.</li>
+    <li>اكتب «لماذا أحب هذا الشخص» بثلاثة أسباب سلوكية، لا صفات عامة.</li>
+    <li>راجع الشهر: ما تغيّر في جسدي؟ في ردود أفعالي؟ في علاقاتي؟</li>
+  </ul>
+
+  <div class="key"><b>القاعدة الوحيدة</b>لا تحاول تغيير كل شيء. اختر <strong>عادة واحدة</strong> من هذا الشهر واستمر عليها 30 يومًا أخرى. الدماغ يتغيّر بالتراكم، لا بالانفجار.</div>
+</section>
+
+<!-- ================= 30 ================= -->
+<section class="page" id="s30">
+  <div class="page-head">
+    <div class="icon-badge"><span class="num">30</span>
+      <svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h13v18H6a2 2 0 0 1-2-2V5Z"/><path d="M8 7h7M8 11h7"/></svg>
+    </div>
+    <div>
+      <h2 class="page-title"><small>الخاتمة العلمية</small>المراجع وحدود العلم</h2>
+      <p class="page-desc">ما نعرفه بثقة، وما هو فرضية، وما نبالغ فيه. العلم الصادق يعرف حدوده.</p>
+    </div>
+  </div>
+
+  <h3>ما يدعمه دليل قوي</h3>
+  <ul class="clean">
+    <li>الحب الرومانسي مرتبط بتنشيط دائرة المكافأة (VTA، المخطط، النواة المتكئة).</li>
+    <li>رؤية صورة الشريك تُنشّط مناطق المكافأة وتُخفّض نشاط مناطق النقد الاجتماعي (بارتلز وزيكي، 2000).</li>
+    <li>الرفض العاطفي يُنشّط مناطق الألم والمكافأة معًا (فيشر وآخرون، 2010).</li>
+    <li>الحب طويل الأمد الشديد يمكن أن يُظهر نشاطًا في مناطق الشغف (أسيفيدو وآخرون، 2012).</li>
+    <li>أنماط التعلّق ترتبط بأنماط تنظيم الانفعال في العلاقات.</li>
+  </ul>
+
+  <h3>ما هو أقل يقينًا</h3>
+  <ul class="clean">
+    <li><strong>الرشّ الأنفي للأوكسيتوسين:</strong> نتائج غير متسقة، وتأثيرات صغيرة، ودراسات كثيرة لم تُكرَّر.</li>
+    <li><strong>الفروق بين «دماغ الرجل والمرأة»:</strong> الأبحاث تُظهر تداخلًا كبيرًا؛ التفسيرات الشعبية مبالغ فيها.</li>
+    <li><strong>«خرائط الحب» في الدماغ:</strong> التصوير العصبي يُظهر ارتباطًا لا سببية. لا يمكن قراءة أفكار شخص من صورة fMRI.</li>
+    <li><strong>المراحل الزمنية:</strong> متوسطات إحصائية، لا قوانين. علاقات كثيرة تخرج عن النموذج.</li>
+  </ul>
+
+  <h3>مراجع للقراءة</h3>
+  <table>
+    <tr><th>المصدر</th><th>الموضوع</th></tr>
+    <tr><td>Bartels, A. &amp; Zeki, S. (2000), <em>NeuroReport</em></td><td>الأساس العصبي للحب الرومانسي</td></tr>
+    <tr><td>Fisher, H., Aron, A. &amp; Brown, L. (2005), <em>J. Comp. Neurol.</em></td><td>الحب الرومانسي: آلية عصبية لاختيار الشريك</td></tr>
+    <tr><td>Fisher, H., Brown, L. et al. (2010), <em>J. Neurophysiol.</em></td><td>المكافأة والإدمان وتنظيم الانفعال في الرفض</td></tr>
+    <tr><td>Acevedo, B. et al. (2012), <em>Soc. Cogn. Affect. Neurosci.</em></td><td>الارتباطات العصبية للحب الرومانسي طويل الأمد</td></tr>
+    <tr><td>Marazziti, D. et al. (1999), <em>Psychological Medicine</em></td><td>ناقلات السيروتونين في الحب الرومانسي</td></tr>
+    <tr><td>Eisenberger, N. et al. (2003), <em>Science</em></td><td>الألم الاجتماعي والألم الجسدي</td></tr>
+    <tr><td>Ortigue, S. et al. (2010), <em>J. Neuroimaging</em></td><td>مراجعة التصوير العصبي للحب</td></tr>
+    <tr><td>Gottman, J. — أبحاث العلاقات الزوجية</td><td>فرسان الخراب ونسبة 5:1</td></tr>
+    <tr><td>Bowlby, J. &amp; Ainsworth, M. — نظرية التعلّق</td><td>أنماط التعلّق</td></tr>
+    <tr><td>Sternberg, R. (1986) — نظرية الحب المثلثية</td><td>أنواع الحب السبعة</td></tr>
+  </table>
+
+  <div class="quote">«كل ما قرأته هنا لا يُغني عن أن تعيش. العلم يشرح الخريطة؛ الحب هو أن تمشي الطريق.»</div>
+
+  <div class="key"><b>الكلمة الأخيرة</b>أنت لا تحتاج أن تكون مثاليًا لتُحب أو لتُحَب. تحتاج فقط أن تكون <strong>واعيًا</strong> بما يحدث فيك، و<strong>صادقًا</strong> فيما تقوله، و<strong>حاضرًا</strong> حين يكون الآخر حاضرًا. الباقي — كما يقولون — كيمياء.</div>
+</section>
+
+<footer style="text-align:center;padding:70px 24px 90px;color:#7f90ad;font-size:13.5px;line-height:2">
+  <div style="font-size:20px;color:#2ee6c5;font-weight:800;margin-bottom:8px">عصبية الحب</div>
+  دليل دراسي وتدريبي · 30 قسمًا · للاستخدام الشخصي والتعليمي<br>
+  <span style="color:#f5c451">أُعدّ خصيصًا لهشام وليد</span><br>
+  <span style="color:#5f6f8a">صُمّم للقراءة على الشاشة والطباعة على A4</span>
+</footer>
+
+<button id="top" aria-label="أعلى الصفحة">↑</button>
+
+<script>
+(function(){
+  var bar=document.getElementById('bar'),top=document.getElementById('top');
+  function onScroll(){
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    var p=h>0?(window.scrollY/h)*100:0;
+    bar.style.width=p+'%';
+    top.style.display=window.scrollY>600?'grid':'none';
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  top.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+  onScroll();
+})();
+</script>
+</body>
+</html>
